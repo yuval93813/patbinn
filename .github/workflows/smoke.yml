@@ -1,0 +1,33 @@
+name: smoke
+
+# Fast integrity checks on the repository itself: result files parse and are
+# complete, the manifests still satisfy the no-leakage invariant, the dataset
+# matches what the docs claim, and nothing references a removed file.
+#
+# The module-import check needs torch and is skipped here; run the full suite
+# inside the container instead:
+#     apptainer exec patbinn.sif python3 -m pytest tests/ -q
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        run: pip install pytest
+
+      - name: Run repository integrity tests
+        # test_all_modules_import needs torch, which is supplied by the
+        # container rather than pip; everything else runs on a bare interpreter.
+        run: pytest tests/ -q --deselect tests/test_smoke.py::test_all_modules_import

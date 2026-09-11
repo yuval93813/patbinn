@@ -1,0 +1,65 @@
+family,family_idx,variant,variant_idx,organism,title_keyword
+Coronaviridae,0,SARS-CoV-2,0,Severe acute respiratory syndrome coronavirus 2,
+Coronaviridae,0,SARS-CoV-1,1,SARS coronavirus,complete genome
+Coronaviridae,0,MERS-CoV,2,Middle East respiratory syndrome-related coronavirus,
+Coronaviridae,0,HCoV-229E,3,Human coronavirus 229E,
+Coronaviridae,0,HCoV-NL63,4,Human coronavirus NL63,
+Coronaviridae,0,HCoV-OC43,5,Human coronavirus OC43,
+Coronaviridae,0,HCoV-HKU1,6,Human coronavirus HKU1,
+Coronaviridae,0,Bat-CoV-RaTG13,7,Bat coronavirus RaTG13,
+Flaviviridae,1,Dengue-1,0,Dengue virus 1,
+Flaviviridae,1,Dengue-2,1,Dengue virus 2,
+Flaviviridae,1,Dengue-3,2,Dengue virus 3,
+Flaviviridae,1,Dengue-4,3,Dengue virus 4,
+Flaviviridae,1,Zika,4,Zika virus,
+Flaviviridae,1,West-Nile,5,West Nile virus,
+Flaviviridae,1,Yellow-Fever,6,Yellow fever virus,
+Flaviviridae,1,Japanese-Encephalitis,7,Japanese encephalitis virus,
+Filoviridae,2,Ebola-Zaire,0,Zaire ebolavirus,
+Filoviridae,2,Ebola-Sudan,1,Sudan ebolavirus,
+Filoviridae,2,Ebola-Bundibugyo,2,Bundibugyo ebolavirus,
+Filoviridae,2,Ebola-TaiForest,3,Tai Forest ebolavirus,
+Filoviridae,2,Ebola-Reston,4,Reston ebolavirus,
+Filoviridae,2,Marburg,5,Marburg marburgvirus,Musoke
+Filoviridae,2,Ravn,6,Marburg marburgvirus,Ravn
+Filoviridae,2,Lloviu,7,Lloviu cuevavirus,
+Hepadnaviridae,3,HBV-genotype-A,0,Hepatitis B virus,genotype A
+Hepadnaviridae,3,HBV-genotype-B,1,Hepatitis B virus,genotype B
+Hepadnaviridae,3,HBV-genotype-C,2,Hepatitis B virus,genotype C
+Hepadnaviridae,3,HBV-genotype-D,3,Hepatitis B virus genotype D,complete genome
+Hepadnaviridae,3,HBV-genotype-E,4,Hepatitis B virus,genotype E
+Hepadnaviridae,3,HBV-genotype-F,5,Hepatitis B virus genotype F,complete genome
+Hepadnaviridae,3,HBV-genotype-G,6,Hepatitis B virus,genotype G
+Hepadnaviridae,3,HBV-genotype-H,7,Hepatitis B virus,genotype H
+Retroviridae,4,HIV-1-subtype-A,0,Human immunodeficiency virus 1,92UG037
+Retroviridae,4,HIV-1-subtype-B,1,Human immunodeficiency virus 1,HXB2
+Retroviridae,4,HIV-1-subtype-C,2,Human immunodeficiency virus 1,subtype C
+Retroviridae,4,HIV-1-subtype-D,3,Human immunodeficiency virus 1,94UG114
+Retroviridae,4,HIV-1-subtype-F,4,Human immunodeficiency virus 1,93BR020
+Retroviridae,4,HIV-1-subtype-G,5,Human immunodeficiency virus 1,92NG083
+Retroviridae,4,HIV-1-subtype-H,6,Human immunodeficiency virus 1,VI991
+Retroviridae,4,HIV-2,7,Human immunodeficiency virus 2,
+Herpesviridae,5,HSV-1,0,Human herpesvirus 1,
+Herpesviridae,5,HSV-2,1,Human herpesvirus 2,
+Herpesviridae,5,VZV,2,Human herpesvirus 3,
+Herpesviridae,5,EBV,3,Human herpesvirus 4,
+Herpesviridae,5,HCMV,4,Human herpesvirus 5,
+Herpesviridae,5,HHV-6A,5,Human betaherpesvirus 6A,
+Herpesviridae,5,HHV-6B,6,Human herpesvirus 6B,
+Herpesviridae,5,HHV-7,7,Human herpesvirus 7,
+Picornaviridae,6,Poliovirus-1,0,Poliovirus 1,complete genome
+Picornaviridae,6,Poliovirus-2,1,Poliovirus 2,complete genome
+Picornaviridae,6,Poliovirus-3,2,Poliovirus 3,
+Picornaviridae,6,Coxsackievirus-A16,3,Coxsackievirus A16,
+Picornaviridae,6,Coxsackievirus-B3,4,Coxsackievirus B3,
+Picornaviridae,6,Rhinovirus-A,5,Rhinovirus A,
+Picornaviridae,6,Rhinovirus-B,6,Rhinovirus B,
+Picornaviridae,6,Rhinovirus-C,7,Rhinovirus C,
+Paramyxoviridae,7,Measles,0,Measles virus,
+Paramyxoviridae,7,Mumps,1,Mumps orthorubulavirus,
+Paramyxoviridae,7,RSV-A,2,Human respiratory syncytial virus A,
+Paramyxoviridae,7,RSV-B,3,Human respiratory syncytial virus B,
+Paramyxoviridae,7,Human-Parainfluenza-1,4,Human parainfluenza virus 1,
+Paramyxoviridae,7,Human-Parainfluenza-3,5,Human parainfluenza virus 3,
+Paramyxoviridae,7,Nipah,6,Nipah virus,
+Paramyxoviridae,7,Human-Metapneumovirus,7,Human metapneumovirus,

@@ -1,0 +1,13 @@
+{
+  "fold": 4,
+  "classifier": "flat",
+  "precision": "binary",
+  "hidden_sizes": [
+    1024,
+    128
+  ],
+  "val_acc": 52.32338480264777,
+  "per_read_leaf_acc": 47.63210686386803,
+  "sample_leaf_acc": 90.63492063492063,
+  "n_test_samples": 630
+}

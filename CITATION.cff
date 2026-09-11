@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: "PatBiNN: Hierarchical Binarized Virus Read Classifier"
+message: "If you use this software, please cite the paper below."
+type: software
+authors:
+  - family-names: Harary
+    given-names: Yuval
+  - family-names: Sharoni
+    given-names: Almog
+  - family-names: Garzón
+    given-names: Esteban
+  - family-names: Yavits
+    given-names: Leonid
+license: MIT
+repository-code: "https://github.com/yuval93813/patbinn"
+abstract: >-
+  A hardware-oriented binarized neural network that classifies a single short
+  Illumina sequencing read into one of 58 virus variants, using a two-stage
+  Mixture-of-Experts design (a family router followed by one of eight per-family
+  variant experts). Evaluated with genome-level 5-fold cross-validation on 543
+  real NCBI isolates.
+keywords:
+  - binarized neural networks
+  - processing-in-memory
+  - genome classification
+  - metagenomics
+  - mixture of experts
+preferred-citation:
+  type: conference-paper
+  title: "PatBiNN: A 65 nm Processing-in-CAM Based BNN Implementation for Pathogen Genome Classification"
+  authors:
+    - family-names: Harary
+      given-names: Yuval
+    - family-names: Sharoni
+      given-names: Almog
+    - family-names: Garzón
+      given-names: Esteban
+    - family-names: Yavits
+      given-names: Leonid
+  collection-title: "2026 Design, Automation & Test in Europe Conference (DATE)"
+  publisher:
+    name: IEEE
+  start: 1
+  end: 7
+  year: 2026

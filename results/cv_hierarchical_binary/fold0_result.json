@@ -1,0 +1,30 @@
+{
+  "fold": 0,
+  "precision": "binary",
+  "router_hidden_sizes": [
+    1024,
+    128
+  ],
+  "expert_hidden_sizes": [
+    1024,
+    128
+  ],
+  "router_val_acc": 96.21244665667848,
+  "expert_val_accs": {
+    "Coronaviridae": 99.66071428571429,
+    "Flaviviridae": 96.87645209046997,
+    "Filoviridae": 92.06928633268294,
+    "Hepadnaviridae": 90.38781778484994,
+    "Retroviridae": 91.22060857538035,
+    "Herpesviridae": 88.52111111111111,
+    "Picornaviridae": 76.02723644047899,
+    "Paramyxoviridae": 97.8251518616826
+  },
+  "per_read_router_acc": 97.15170544855287,
+  "per_read_expert_acc_oracle": 90.45118127477149,
+  "sample_family_acc": 100.0,
+  "sample_variant_acc_given_correct_routing": 100.0,
+  "sample_leaf_acc_pipeline": 100.0,
+  "sample_variant_acc_oracle": 100.0,
+  "n_test_samples": 678
+}

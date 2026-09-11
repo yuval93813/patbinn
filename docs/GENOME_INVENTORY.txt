@@ -1,0 +1,1249 @@
+PatBiNN - Genome Inventory
+======================================================================
+Generated:  2026-09-11
+Source:     data/manifests/genome_manifest_multi.csv
+Regenerate: python3 scripts/make_genome_inventory.py
+
+Total genomes:  543
+Total classes:  58  (family/variant pairs)
+Families:       8
+Isolates/class: min 3, max 10, mean 9.4
+
+All genomes were retrieved from the NCBI nucleotide database via
+data/download_genomes.py, using organism- and length-band-constrained
+Entrez queries with title/defline validation (see that file's docstring
+for the exact retrieval and deduplication logic).
+
+Folds are assigned at download time as fold = isolate_idx % K, so every
+isolate of a class is spread across folds and no genome can appear in
+both the training and the test side of a split.
+
+Every class is represented by more than one independent isolate,
+so each class receives a genuine held-out-genome test in every fold.
+
+======================================================================
+
+## Coronaviridae  (7 variants, 70 genomes)
+----------------------------------------------------------------------
+  SARS-CoV-2  (10 isolates)
+    [0] fold=0  NC_045512.2      29903 bp  uid=1798174254
+          Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
+    [1] fold=1  OZ492125.1       29862 bp  uid=3356549772
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+    [2] fold=2  OZ492124.1       29850 bp  uid=3356549771
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+    [3] fold=3  OZ492123.1       29844 bp  uid=3356549770
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+    [4] fold=4  OZ492122.1       29844 bp  uid=3356549769
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+    [5] fold=0  OZ492121.1       29850 bp  uid=3356549768
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+    [6] fold=1  OZ492120.1       29862 bp  uid=3356549767
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+    [7] fold=2  OZ492119.1       29862 bp  uid=3356549766
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+    [8] fold=3  OZ492118.1       29850 bp  uid=3356549765
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+    [9] fold=4  OZ492117.1       29862 bp  uid=3356549764
+          Severe acute respiratory syndrome coronavirus 2 genome assembly, complete genome: monopartite
+
+  SARS-CoV-1  (10 isolates)
+    [0] fold=0  NC_004718.3      29751 bp  uid=30271926
+          SARS coronavirus Tor2, complete genome
+    [1] fold=1  JX163928.1       29646 bp  uid=404325900
+          SARS coronavirus Tor2 isolate Tor2/FP1-10895, complete genome
+    [2] fold=2  JX163927.1       29646 bp  uid=404325885
+          SARS coronavirus Tor2 isolate Tor2/FP1-10851, complete genome
+    [3] fold=3  JX163926.1       29646 bp  uid=404325870
+          SARS coronavirus Tor2 isolate Tor2/FP1-10912, complete genome
+    [4] fold=4  JX163925.1       29646 bp  uid=404325855
+          SARS coronavirus Tor2 isolate Tor2/FP1-10895, complete genome
+    [5] fold=0  JX163924.1       29646 bp  uid=404325840
+          SARS coronavirus Tor2 isolate Tor2/FP1-10851, complete genome
+    [6] fold=1  JX163923.1       29646 bp  uid=404325825
+          SARS coronavirus Tor2 isolate Tor2/FP1-10912, complete genome
+    [7] fold=2  AY545919.1       29739 bp  uid=42563758
+          SARS coronavirus isolate CFB/SZ/94/03, complete genome
+    [8] fold=3  AY545918.1       29737 bp  uid=42563755
+          SARS coronavirus isolate HC/GZ/32/03, complete genome
+    [9] fold=4  AY545917.1       29739 bp  uid=42563753
+          SARS coronavirus isolate HC/GZ/81/03, complete genome
+
+  MERS-CoV  (10 isolates)
+    [0] fold=0  NC_019843.3      30119 bp  uid=667489388
+          Middle East respiratory syndrome-related coronavirus isolate HCoV-EMC/2012, complete genome
+    [1] fold=1  PZ439299.1       30118 bp  uid=3336054397
+          Middle East respiratory syndrome-related coronavirus isolate MERS-CoV/Camel/Kazakhstan/12/2025, complete genome
+    [2] fold=2  PZ397813.1       29890 bp  uid=3331960555
+          Middle East respiratory syndrome-related coronavirus isolate 025192655101, partial genome
+    [3] fold=3  PX660034.1       29988 bp  uid=3129182603
+          Middle East respiratory syndrome-related coronavirus isolate 025188840901RBS1, complete genome
+    [4] fold=4  PV239413.1       30051 bp  uid=2925762487
+          UNVERIFIED: Middle East respiratory syndrome-related coronavirus isolate MERS-CoV/dromedary camel/Egypt/STM0244/2023 sequence
+    [5] fold=0  PV239412.1       29985 bp  uid=2925762486
+          UNVERIFIED: Middle East respiratory syndrome-related coronavirus isolate MERS-CoV/dromedary camel/Egypt/STM0200/2023 sequence
+    [6] fold=1  PV239411.1       30001 bp  uid=2925762485
+          UNVERIFIED: Middle East respiratory syndrome-related coronavirus isolate MERS-CoV/dromedary camel/Egypt/STM0199/2023 sequence
+    [7] fold=2  PV239410.1       29995 bp  uid=2925762484
+          UNVERIFIED: Middle East respiratory syndrome-related coronavirus isolate MERS-CoV/dromedary camel/Egypt/STM0198/2023 sequence
+    [8] fold=3  PV239409.1       29994 bp  uid=2925762483
+          UNVERIFIED: Middle East respiratory syndrome-related coronavirus isolate MERS-CoV/dromedary camel/Egypt/STM0191/2023 sequence
+    [9] fold=4  PV239408.1       29998 bp  uid=2925762482
+          UNVERIFIED: Middle East respiratory syndrome-related coronavirus isolate MERS-CoV/dromedary camel/Egypt/STM0190/2023 sequence
+
+  HCoV-229E  (10 isolates)
+    [0] fold=0  NC_002645.1      27317 bp  uid=12175745
+          Human coronavirus 229E, complete genome
+    [1] fold=1  PZ496046.1       27277 bp  uid=3342271145
+          UNVERIFIED: Human coronavirus 229E isolate HCoV-229E_INS001/LOR/PER/2025, partial genome
+    [2] fold=2  PX404513.1       27295 bp  uid=3332198490
+          MAG: Human coronavirus 229E isolate HCoV-229E/human/ARG/8RSPER0094/2022 genomic sequence
+    [3] fold=3  LC654445.1       27263 bp  uid=2121306165
+          Human coronavirus 229E Fukushima_H829_2020 RNA, complete genome
+    [4] fold=4  OZ470519.1       27300 bp  uid=3333278330
+          Human coronavirus 229E isolate RNA genome assembly, complete genome: monopartite
+    [5] fold=0  OZ470518.1       27304 bp  uid=3333278329
+          Human coronavirus 229E isolate RNA genome assembly, complete genome: monopartite
+    [6] fold=1  LC922646.1       27306 bp  uid=3260662277
+          Human coronavirus 229E HCoV229E_Shiogama_SSP028_2024 RNA, complete genome
+    [7] fold=2  PZ086308.1       26738 bp  uid=3254709139
+          UNVERIFIED: Human coronavirus 229E isolate hCoV-229E/Russia/SPE-RII-1891S/2025 genomic sequence
+    [8] fold=3  PZ086307.1       27278 bp  uid=3254709138
+          UNVERIFIED: Human coronavirus 229E isolate hCoV-229E/Russia/SPE-RII-24-3915S/2025 genomic sequence
+    [9] fold=4  PZ086306.1       27180 bp  uid=3254709130
+          Human coronavirus 229E isolate hCoV-229E/Russia/KHM-RII-MH261675S/2025, partial genome
+
+  HCoV-NL63  (10 isolates)
+    [0] fold=0  NC_005831.2      27553 bp  uid=49169782
+          Human Coronavirus NL63, complete genome
+    [1] fold=1  LC720428.1       27529 bp  uid=2278964265
+          Human coronavirus NL63 HCoVNL63_Fukushima_O650_2019 RNA, nearly complete genome
+    [2] fold=2  LC687402.1       27550 bp  uid=2203293797
+          Human coronavirus NL63 Fukushima_OR236_2021 RNA, complete genome
+    [3] fold=3  LC687394.1       27563 bp  uid=2203293727
+          Human coronavirus NL63 Fukushima_H257_2018 RNA, complete genome
+    [4] fold=4  LC895504.1       27488 bp  uid=3075526240
+          Human coronavirus NL63 NL63/Yamagata.JPN/2016-854 RNA, nearly complete genome
+    [5] fold=0  LC922677.1       27535 bp  uid=3260662451
+          Human coronavirus NL63 HCoVNL63_Fukushima_OH988_2025 RNA, complete genome
+    [6] fold=1  LC922676.1       27535 bp  uid=3260662443
+          Human coronavirus NL63 HCoVNL63_Fukushima_OH973_2025 RNA, complete genome
+    [7] fold=2  LC922664.1       27535 bp  uid=3260662344
+          Human coronavirus NL63 HCoVNL63_Fukushima_OH878_2025 RNA, complete genome
+    [8] fold=3  LC922663.1       27535 bp  uid=3260662336
+          Human coronavirus NL63 HCoVNL63_Fukushima_OH868_2025 RNA, complete genome
+    [9] fold=4  PX640308.1       27553 bp  uid=3126447038
+          Human coronavirus NL63 isolate srw003, complete genome
+
+  HCoV-OC43  (10 isolates)
+    [0] fold=0  NC_006213.1      30741 bp  uid=1578871709
+          Human coronavirus OC43 strain ATCC VR-759, complete genome
+    [1] fold=1  PZ496039.1       30738 bp  uid=3342271138
+          UNVERIFIED: Human coronavirus OC43 isolate HCoV-OC43_INS001/LOR/PER/2025, partial genome
+    [2] fold=2  PV798440.1       30780 bp  uid=3019634590
+          UNVERIFIED: Human coronavirus OC43 isolate 21_S6 sequence
+    [3] fold=3  PV798439.1       30737 bp  uid=3019634589
+          UNVERIFIED: Human coronavirus OC43 isolate 20_S8 sequence
+    [4] fold=4  PV798438.1       30797 bp  uid=3019634588
+          UNVERIFIED: Human coronavirus OC43 isolate 19_S5 sequence
+    [5] fold=0  PV798437.1       30683 bp  uid=3019634577
+          Human coronavirus OC43 isolate 18_S7, complete genome
+    [6] fold=1  PV798436.1       30752 bp  uid=3019634576
+          UNVERIFIED: Human coronavirus OC43 isolate 17_S4 sequence
+    [7] fold=2  PV798435.1       30639 bp  uid=3019634565
+          Human coronavirus OC43 isolate 16_S6, complete genome
+    [8] fold=3  PV798434.1       30795 bp  uid=3019634564
+          UNVERIFIED: Human coronavirus OC43 isolate 13_S5 sequence
+    [9] fold=4  PV798433.1       30736 bp  uid=3019634553
+          Human coronavirus OC43 isolate 12_S3, complete genome
+
+  HCoV-HKU1  (10 isolates)
+    [0] fold=0  NC_006577.2      29926 bp  uid=85667876
+          Human coronavirus HKU1, complete genome
+    [1] fold=1  PV619111.1       29803 bp  uid=2978467840
+          Human coronavirus HKU1 isolate HKU1A/1587-Passage2-NasalOrganoids, complete genome
+    [2] fold=2  PV619110.1       29777 bp  uid=2978467830
+          Human coronavirus HKU1 isolate HKU1B/6025K-Passage2-NasalOrganoids, complete genome
+    [3] fold=3  PZ436647.1       29742 bp  uid=3342271284
+          Human coronavirus HKU1 isolate hCoV-HKU1/Russia/SPE-RII-132S/2017, partial genome
+    [4] fold=4  PZ436646.1       29756 bp  uid=3342271274
+          Human coronavirus HKU1 isolate hCoV-HKU1/Russia/SPE-RII-214S/2019, partial genome
+    [5] fold=0  PZ436645.1       29746 bp  uid=3342271273
+          UNVERIFIED: Human coronavirus HKU1 isolate hCoV-HKU1/Russia/SPE-RII-277S/2019 genomic sequence
+    [6] fold=1  PZ436644.1       29734 bp  uid=3342271263
+          Human coronavirus HKU1 isolate hCoV-HKU1/Russia/SPE-RII-8371S/2023, partial genome
+    [7] fold=2  PZ436643.1       29873 bp  uid=3342271253
+          Human coronavirus HKU1 isolate hCoV-HKU1/Russia/SPE-RII-22304S/2023, partial genome
+    [8] fold=3  PZ436642.1       29827 bp  uid=3342271252
+          UNVERIFIED: Human coronavirus HKU1 isolate hCoV-HKU1/Russia/SPE-RII-MH158613S/2023 genomic sequence
+    [9] fold=4  PZ436641.1       29853 bp  uid=3342271242
+          Human coronavirus HKU1 isolate hCoV-HKU1/Russia/MOW-RII-MH144703S/2023, partial genome
+
+
+## Flaviviridae  (8 variants, 80 genomes)
+----------------------------------------------------------------------
+  Dengue-1  (10 isolates)
+    [0] fold=0  NC_001477.1      10735 bp  uid=9626685
+          Dengue virus 1, complete genome
+    [1] fold=1  PZ602941.1       10645 bp  uid=3352960926
+          Dengue virus type 1 isolate 7406/2025 D1 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [2] fold=2  PZ602905.1       10677 bp  uid=3352960677
+          Dengue virus type 1 isolate 5627/2025 D1 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [3] fold=3  PZ234918.1       10621 bp  uid=3260459189
+          Dengue virus type 1 isolate SZBA_DV20250128 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [4] fold=4  PZ234914.1       10514 bp  uid=3260459181
+          Dengue virus type 1 isolate SZBA_DV20240621 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [5] fold=0  PZ234913.1       10539 bp  uid=3260459179
+          Dengue virus type 1 isolate SZBA_DV20240620 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [6] fold=1  PZ234912.1       10539 bp  uid=3260459177
+          Dengue virus type 1 isolate SZBA_DV20240619 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [7] fold=2  PZ234911.1       10539 bp  uid=3260459175
+          Dengue virus type 1 isolate SZBA_DV20240610 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [8] fold=3  PZ234910.1       10539 bp  uid=3260459173
+          Dengue virus type 1 isolate SZBA_DV20240607 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [9] fold=4  PZ234909.1       10533 bp  uid=3260459171
+          Dengue virus type 1 isolate SZBA_DV20240602 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+
+  Dengue-2  (10 isolates)
+    [0] fold=0  NC_001474.2      10723 bp  uid=158976983
+          Dengue virus 2, complete genome
+    [1] fold=1  PZ603444.1       10598 bp  uid=3352961960
+          Dengue virus type 2 isolate 3842/2025 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [2] fold=2  PZ603442.1       10562 bp  uid=3352961956
+          Dengue virus type 2 isolate 1430/2026 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [3] fold=3  PZ234917.1       10669 bp  uid=3260459187
+          Dengue virus type 2 isolate SZBA_DV20250057 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [4] fold=4  PZ234916.1       10561 bp  uid=3260459185
+          Dengue virus type 2 isolate SZBA_DV20250053 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [5] fold=0  PZ234915.1       10482 bp  uid=3260459183
+          Dengue virus type 2 isolate SZBA_DV20250008 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [6] fold=1  PZ234902.1       10680 bp  uid=3260459157
+          Dengue virus type 2 isolate SZBA_DV20240097 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [7] fold=2  PZ234901.1       10718 bp  uid=3260459155
+          Dengue virus type 2 isolate SZBA_DV20240094 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, complete sequence
+    [8] fold=3  PZ234900.1       10680 bp  uid=3260459153
+          Dengue virus type 2 isolate SZBA_DV20240069 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [9] fold=4  PZ234899.1       10688 bp  uid=3260459151
+          Dengue virus type 2 isolate SZBA_DV20240068 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+
+  Dengue-3  (10 isolates)
+    [0] fold=0  NC_001475.2      10707 bp  uid=163644368
+          Dengue virus 3, complete genome
+    [1] fold=1  LC773256.1        9911 bp  uid=3353459308
+          Dengue virus type 3 24A_STP_2022 gene for polyprotein, partial cds
+    [2] fold=2  LC773253.1        9911 bp  uid=3353459302
+          Dengue virus type 3 14A_STP_2022 gene for polyprotein, partial cds
+    [3] fold=3  PZ546417.1       10637 bp  uid=3349352692
+          Dengue virus type 3 isolate JX202501 polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [4] fold=4  PZ516052.1       10640 bp  uid=3345073329
+          Dengue virus type 3 isolate Pool polyprotein (POLY) gene, complete cds; and sfRNA1 lncRNA gene, partial sequence
+    [5] fold=0  OZ484517.1       10461 bp  uid=3349480136
+          dengue virus type 3 isolate IEDCR-ARBV2500903 genome assembly, complete genome: monopartite
+    [6] fold=1  OZ484516.1       10461 bp  uid=3349480135
+          dengue virus type 3 isolate IEDCR-ARBV2501063 genome assembly, complete genome: monopartite
+    [7] fold=2  OZ484515.1       10461 bp  uid=3349480134
+          dengue virus type 3 isolate IEDCR-ARBV2501071 genome assembly, complete genome: monopartite
+    [8] fold=3  OZ484513.1       10461 bp  uid=3349480132
+          dengue virus type 3 isolate IEDCR-ARBV2501003 genome assembly, complete genome: monopartite
+    [9] fold=4  OZ484500.1       10461 bp  uid=3349480119
+          dengue virus type 3 isolate IEDCR-ARBV2501038 genome assembly, complete genome: monopartite
+
+  Dengue-4  (10 isolates)
+    [0] fold=0  NC_002640.1      10649 bp  uid=12084822
+          Dengue virus 4, complete genome
+    [1] fold=1  OZ484504.1       10511 bp  uid=3349480123
+          dengue virus type 4 isolate IEDCR-ARBV2501018 genome assembly, complete genome: monopartite
+    [2] fold=2  OZ484503.1       10511 bp  uid=3349480122
+          dengue virus type 4 isolate IEDCR-ARBV2500972 genome assembly, complete genome: monopartite
+    [3] fold=3  PZ049732.1       10648 bp  uid=3199409383
+          Dengue virus type 4 isolate KMSLABD4, complete genome
+    [4] fold=4  PX480447.1       10649 bp  uid=3101597498
+          Dengue virus type 4 isolate D20-0259, complete genome
+    [5] fold=0  PX480446.1       10649 bp  uid=3101597496
+          Dengue virus type 4 isolate D20-0040, complete genome
+    [6] fold=1  PX480445.1       10649 bp  uid=3101597494
+          Dengue virus type 4 isolate D19-2229, complete genome
+    [7] fold=2  PX480444.1       10649 bp  uid=3101597492
+          Dengue virus type 4 isolate D19-1649, complete genome
+    [8] fold=3  PX480443.1       10649 bp  uid=3101597490
+          Dengue virus type 4 isolate D19-1286, complete genome
+    [9] fold=4  PX480442.1       10649 bp  uid=3101597488
+          Dengue virus type 4 isolate D18-2040, complete genome
+
+  Zika  (10 isolates)
+    [0] fold=0  NC_012532.1      10794 bp  uid=226377833
+          Zika virus strain MR 766, complete genome
+    [1] fold=1  NC_035889.1      10808 bp  uid=1245709111
+          Zika virus isolate ZIKV/H. sapiens/Brazil/Natal/2015, complete genome
+    [2] fold=2  PV012995.1       10272 bp  uid=2894813785
+          Zika virus isolate ZKA-24-021 polyprotein (POLY) gene, complete cds
+    [3] fold=3  PV012994.1       10272 bp  uid=2894813783
+          Zika virus isolate ZKA-23-012 polyprotein (POLY) gene, complete cds
+    [4] fold=4  PX404510.1       10744 bp  uid=3332198478
+          MAG: Zika virus isolate ZIKV/human/HON/36ARB0134/2016 genomic sequence
+    [5] fold=0  PX404503.1       10645 bp  uid=3332198463
+          MAG: Zika virus isolate ZIKV/human/HON/36ARB0132/2016 genomic sequence
+    [6] fold=1  PX404502.1       10856 bp  uid=3332198461
+          MAG: Zika virus isolate ZIKV/human/HON/36ARB0104/2016 genomic sequence
+    [7] fold=2  PX404501.1       10732 bp  uid=3332198459
+          MAG: Zika virus isolate ZIKV/human/HON/36ARB0053/2016 genomic sequence
+    [8] fold=3  PX404500.1       10732 bp  uid=3332198457
+          MAG: Zika virus isolate ZIKV/human/HON/36ARB0050/2016 genomic sequence
+    [9] fold=4  PX404475.1       10711 bp  uid=3332198359
+          MAG: Zika virus isolate ZIKV/human/HON/36ARB0068/2016 genomic sequence
+
+  West-Nile  (10 isolates)
+    [0] fold=0  NC_009942.1      11029 bp  uid=158516887
+          West Nile virus lineage 1, complete genome
+    [1] fold=1  NC_001563.2      10962 bp  uid=11528013
+          West Nile virus lineage 2, complete genome
+    [2] fold=2  PZ437308.1       10781 bp  uid=3353263804
+          West Nile virus isolate WNV/USA/WAPHL-261540/2017 polyprotein (POLY) gene, complete cds
+    [3] fold=3  PZ437307.1       10782 bp  uid=3353263802
+          West Nile virus isolate WNV/USA/WAPHL-539603/2017 polyprotein (POLY) gene, complete cds
+    [4] fold=4  PZ437306.1       10685 bp  uid=3353263800
+          West Nile virus isolate WNV/USA/WAPHL-258489/2016 polyprotein (POLY) gene, partial cds
+    [5] fold=0  PZ437305.1       10009 bp  uid=3353263798
+          West Nile virus isolate WNV/USA/WAPHL-881690/2016 polyprotein (POLY) gene, partial cds
+    [6] fold=1  PZ437304.1       10810 bp  uid=3353263796
+          West Nile virus isolate WNV/USA/WAPHL-344577/2024 polyprotein (POLY) gene, complete cds
+    [7] fold=2  PX404496.1       10301 bp  uid=3332198430
+          MAG: West Nile virus isolate WNV/human/S000024444 genomic sequence
+    [8] fold=3  PX404495.1       10425 bp  uid=3332198428
+          MAG: West Nile virus isolate WNV/human/S000023990 genomic sequence
+    [9] fold=4  PV693361.1       11000 bp  uid=3101874170
+          West Nile virus isolate W2024#238 polyprotein gene, complete cds
+
+  Yellow-Fever  (10 isolates)
+    [0] fold=0  NC_002031.1      10862 bp  uid=9627244
+          Yellow fever virus, complete genome
+    [1] fold=1  PX766933.1       10859 bp  uid=3137249312
+          Yellow fever virus clone TYF5617, complete genome
+    [2] fold=2  PX766931.1       10859 bp  uid=3137249308
+          Yellow fever virus clone TYF5683, complete genome
+    [3] fold=3  PX766930.1       10856 bp  uid=3137249306
+          Yellow fever virus clone TYF5687b, complete genome
+    [4] fold=4  PX766929.1       10760 bp  uid=3137249304
+          Yellow fever virus clone TYF5614, complete genome
+    [5] fold=0  PX766928.1       10861 bp  uid=3137249302
+          Yellow fever virus clone TYF5687a, complete genome
+    [6] fold=1  PX766926.1       10860 bp  uid=3137249298
+          Yellow fever virus clone TYF5689, complete genome
+    [7] fold=2  PX766925.1       10765 bp  uid=3137249296
+          Yellow fever virus clone TYF5677, complete genome
+    [8] fold=3  PX766924.1       10862 bp  uid=3137249294
+          Yellow fever virus clone TYF5573, complete genome
+    [9] fold=4  PX766923.1       10640 bp  uid=3137249292
+          Yellow fever virus clone TYF5627, complete genome
+
+  Japanese-Encephalitis  (10 isolates)
+    [0] fold=0  NC_001437.1      10976 bp  uid=9626460
+          Japanese encephalitis virus, genome
+    [1] fold=1  PZ123354.1       10973 bp  uid=3334434151
+          Japanese encephalitis virus strain JEV/ZZ/HN/2026, complete genome
+    [2] fold=2  PZ345904.1       10965 bp  uid=3302136722
+          Japanese encephalitis virus isolate Beijing/2020-1, complete genome
+    [3] fold=3  PX400461.1       10846 bp  uid=3069044208
+          Japanese encephalitis virus strain SD-2025, complete genome
+    [4] fold=4  PV804250.1       10965 bp  uid=3005298641
+          Japanese encephalitis virus strain YNYX-263, complete genome
+    [5] fold=0  PV804249.1       10965 bp  uid=3005298639
+          Japanese encephalitis virus strain YNYX-170, complete genome
+    [6] fold=1  PV666603.1       10771 bp  uid=2986238368
+          Japanese encephalitis virus strain VIDRL03/VIC/22, complete genome
+    [7] fold=2  PV666602.1       10889 bp  uid=2986238366
+          Japanese encephalitis virus strain P22-02806-13/QLD/22, complete genome
+    [8] fold=3  PV666601.1       10894 bp  uid=2986238364
+          Japanese encephalitis virus strain P22-02436-59/QLD/22, complete genome
+    [9] fold=4  PV666600.1       10793 bp  uid=2986238362
+          Japanese encephalitis virus strain P22-02131-92/QLD/22, complete genome
+
+
+## Filoviridae  (8 variants, 65 genomes)
+----------------------------------------------------------------------
+  Ebola-Zaire  (10 isolates)
+    [0] fold=0  NC_002549.1      18959 bp  uid=10313991
+          Zaire ebolavirus isolate Ebola virus/H.sapiens-tc/COD/1976/Yambuku-Mayinga, complete genome
+    [1] fold=1  OZ276552.1       18582 bp  uid=3018473336
+          Zaire ebolavirus isolate Ebola virus/VECTOR/C.porcellus-lab/COD/1976/Mayinga_NML genome assembly, complete genome: monopartite
+    [2] fold=2  OR084932.1       18532 bp  uid=2695886235
+          Zaire ebolavirus isolate Ebolavirus/H.sapiens-wt/COD/2020/Makanza-rdceqt009903, partial genome
+    [3] fold=3  OR084931.1       18532 bp  uid=2695886225
+          Zaire ebolavirus isolate Ebolavirus/H.sapiens-wt/COD/2020/Mbandaka-RDCEQT002143, partial genome
+    [4] fold=4  OR084930.1       18922 bp  uid=2695886215
+          Zaire ebolavirus isolate Ebolavirus/H.sapiens-wt/COD/2020/Mbandaka-RDCEQT003007, partial genome
+    [5] fold=0  OR084929.1       18939 bp  uid=2695886205
+          Zaire ebolavirus isolate Ebolavirus/H.sapiens-wt/COD/2020/Mbandaka-RDCEQT002148, partial genome
+    [6] fold=1  OR084928.1       18927 bp  uid=2695886195
+          Zaire ebolavirus isolate Ebolavirus/H.sapiens-wt/COD/2020/Mbandaka-RDCEQT000300, partial genome
+    [7] fold=2  OR084927.1       18832 bp  uid=2695886185
+          Zaire ebolavirus isolate Ebolavirus/H.sapiens-wt/COD/2020/Mbandaka-RDCEQT002171, partial genome
+    [8] fold=3  OR084926.1       18832 bp  uid=2695886175
+          Zaire ebolavirus isolate Ebolavirus/H.sapiens-wt/COD/2020/Bomongo-rdceqt002168, partial genome
+    [9] fold=4  OR084925.1       18532 bp  uid=2695886165
+          Zaire ebolavirus isolate Ebolavirus/H.sapiens-wt/COD/2020/Mbandaka-RDCEQT002169, partial genome
+
+  Ebola-Sudan  (10 isolates)
+    [0] fold=0  NC_006432.1      18875 bp  uid=55770807
+          Sudan ebolavirus isolate Sudan virus/H.sapiens-tc/UGA/2000/Gulu-808892, complete genome
+    [1] fold=1  OZ222062.1       18875 bp  uid=2907546949
+          Sudan ebolavirus genome assembly, segment: main
+    [2] fold=2  OQ673069.1       18490 bp  uid=2471617124
+          Sudan ebolavirus isolate Ebolavirus/H.sapiens-wt/Uganda/2022/2022003012_C102, partial genome
+    [3] fold=3  OQ673068.1       18550 bp  uid=2471617114
+          Sudan ebolavirus isolate Ebolavirus/H.sapiens-wt/Uganda/2022/2022002974_C095, partial genome
+    [4] fold=4  OQ673067.1       18742 bp  uid=2471617104
+          Sudan ebolavirus isolate Ebolavirus/H.sapiens-wt/Uganda/2022/2022002286_C034, partial genome
+    [5] fold=0  OQ673066.1       18554 bp  uid=2471617094
+          Sudan ebolavirus isolate Ebolavirus/H.sapiens-wt/Uganda/2022/2022003226_C153, partial genome
+    [6] fold=1  OQ673065.1       18734 bp  uid=2471617084
+          Sudan ebolavirus isolate Ebolavirus/H.sapiens-wt/Uganda/2022/2022002362_C051, partial genome
+    [7] fold=2  OQ673064.1       18718 bp  uid=2471617074
+          Sudan ebolavirus isolate Ebolavirus/H.sapiens-wt/Uganda/2022/2022002423_C055, partial genome
+    [8] fold=3  OQ673063.1       18646 bp  uid=2471617064
+          Sudan ebolavirus isolate Ebolavirus/H.sapiens-wt/Uganda/2022/2022003030_C122, partial genome
+    [9] fold=4  OQ673062.1       18791 bp  uid=2471617054
+          Sudan ebolavirus isolate Ebolavirus/H.sapiens-wt/Uganda/2022/2022002554_C064, partial genome
+
+  Ebola-Bundibugyo  (10 isolates)
+    [0] fold=0  NC_014373.1      18940 bp  uid=302371213
+          Bundibugyo ebolavirus, complete genome
+    [1] fold=1  OZ492176.1       18805 bp  uid=3356549788
+          Bundibugyo virus isolate CL025633 genome assembly, complete genome: monopartite
+    [2] fold=2  OZ491541.1       18805 bp  uid=3355493263
+          Bundibugyo virus isolate CL024202 genome assembly, complete genome: monopartite
+    [3] fold=3  OZ491540.1       18874 bp  uid=3355493262
+          Bundibugyo virus isolate CL023421 genome assembly, complete genome: monopartite
+    [4] fold=4  OZ491539.1       18805 bp  uid=3355493261
+          Bundibugyo virus isolate CL024153 genome assembly, complete genome: monopartite
+    [5] fold=0  OZ491538.1       18805 bp  uid=3355493260
+          Bundibugyo virus isolate CL023974 genome assembly, complete genome: monopartite
+    [6] fold=1  OZ491537.1       18805 bp  uid=3355493259
+          Bundibugyo virus isolate CL023828 genome assembly, complete genome: monopartite
+    [7] fold=2  OZ491536.1       18805 bp  uid=3355493258
+          Bundibugyo virus isolate CL024040 genome assembly, complete genome: monopartite
+    [8] fold=3  OZ491535.1       18890 bp  uid=3355493257
+          Bundibugyo virus isolate CL023559 genome assembly, complete genome: monopartite
+    [9] fold=4  OZ491534.1       18805 bp  uid=3355493256
+          Bundibugyo virus isolate CL024193 genome assembly, complete genome: monopartite
+
+  Ebola-TaiForest  (3 isolates)
+    [0] fold=0  NC_014372.1      18935 bp  uid=302315369
+          Tai Forest ebolavirus isolate Tai Forest virus/H.sapiens-tc/CIV/1994/Pauleoula-CI, complete genome
+    [1] fold=1  MH121167.1       18890 bp  uid=1390208409
+          Tai Forest ebolavirus isolate Ebola virus/H.sapiens-tc/Cote d'Ivoire/1994/Tai Forest-R4371, complete genome
+    [2] fold=2  KU182910.1       18935 bp  uid=965570368
+          Tai Forest ebolavirus isolate Tai Forest virus/H. sapiens-tc/CIV/1994/Tai Forest-CDC807212, complete genome
+
+  Ebola-Reston  (10 isolates)
+    [0] fold=0  NC_004161.1      18891 bp  uid=22789222
+          Reston ebolavirus isolate Reston virus/M.fascicularis-tc/USA/1989/Philippines89-Pennsylvania, complete genome
+    [1] fold=1  MT796851.1       18848 bp  uid=1891133965
+          Reston ebolavirus isolate R08, complete genome
+    [2] fold=2  MK088530.1       18753 bp  uid=1500174716
+          UNVERIFIED: Reston ebolavirus isolate Ebola virus/M.fascicularis/USA/1989/Reston-H28-R4387L, partial genome
+    [3] fold=3  MF540571.1       18890 bp  uid=1231294520
+          Reston ebolavirus isolate DrpZ210BG, complete genome
+    [4] fold=4  MF540570.1       18889 bp  uid=1231294510
+          Reston ebolavirus isolate DrpZ52BF, complete genome
+    [5] fold=0  KY008770.1       18891 bp  uid=1095459734
+          Reston ebolavirus strain Reston virus/M.fascicularis-tc/USA/1989/Philippines89-AZ-1435, complete genome
+    [6] fold=1  KY798012.1       18879 bp  uid=1199302481
+          Reston ebolavirus isolate PHL_A_2009_(813161), complete genome
+    [7] fold=2  KY798011.1       18868 bp  uid=1199302472
+          Reston ebolavirus isolate PHL_A_2008_(811412), complete genome
+    [8] fold=3  KY798010.1       18879 bp  uid=1199302463
+          Reston ebolavirus isolate PHL_A_2008_(811411), complete genome
+    [9] fold=4  KY798009.1       18879 bp  uid=1199302454
+          Reston ebolavirus isolate USA_TX_1996_(807334), complete genome
+
+  Marburg  (10 isolates)
+    [0] fold=0  NC_001608.4      19112 bp  uid=2972135382
+          Marburg virus - Musoke, Kenya, 1980, complete genome
+    [1] fold=1  NC_024781.1      19114 bp  uid=678222041
+          Marburg marburgvirus isolate Ravn virus/H.sapiens-tc/KEN/1987/Kitum Cave-810040, complete genome
+    [2] fold=2  PX278686.1       19112 bp  uid=3062941051
+          Orthomarburgvirus marburgense strain Marburg virus/H. sapiens-tc/KEN/Mt. Elgon-Musoke F3, complete genome
+    [3] fold=3  PX278685.1       19113 bp  uid=3062941043
+          Orthomarburgvirus marburgense strain Marburg virus/H.sapien-tc/ANG/2004/Angola325, complete genome
+    [4] fold=4  KP985768.1       19113 bp  uid=777861532
+          Marburg marburgvirus isolate Marburg virus/H. sapiens-tc/UGA/2014/Kampala-812601, complete genome
+    [5] fold=0  KY047764.1       19025 bp  uid=1124891100
+          Orthomarburgvirus marburgense isolate Marburg virus/RML-IRF/M.auratus-lab/AGO/2005/Angola-368-HA, complete genome
+    [6] fold=1  KY047763.1       19115 bp  uid=1124891092
+          Orthomarburgvirus marburgense isolate Marburg virus/H.sapiens-tc/AGO/2005/Angola-368, complete genome
+    [7] fold=2  KR867677.1       19113 bp  uid=824041319
+          Marburg marburgvirus isolate Marburg virus/H.sapiens-tc/AGO/2005/Angola-200501379, complete genome
+    [8] fold=3  KP117261.1       19113 bp  uid=745793581
+          Mutant Marburg marburgvirus strain recMARV-371bat, complete genome
+    [9] fold=4  KP117260.1       19113 bp  uid=745793573
+          Mutant Marburg marburgvirus strain recMARV-371bat-294, complete genome
+
+  Ravn  (6 isolates)
+    [0] fold=0  NC_024781.1      19114 bp  uid=678222041
+          Marburg marburgvirus isolate Ravn virus/H.sapiens-tc/KEN/1987/Kitum Cave-810040, complete genome
+    [1] fold=1  KU179482.1       19114 bp  uid=961554850
+          Orthomarburgvirus marburgense isolate Ravn virus/H. sapiens-tc/KEN/1987/Ravn-CDC811103, complete genome
+    [2] fold=2  EU500828.1       19114 bp  uid=187480768
+          Lake Victoria marburgvirus - Ravn isolate R2, complete genome
+    [3] fold=3  EU500827.1       19114 bp  uid=187480760
+          Lake Victoria marburgvirus - Ravn isolate R1, complete genome
+    [4] fold=4  EU500826.1       19114 bp  uid=187480752
+          Lake Victoria marburgvirus - Ravn isolate R3, complete genome
+    [5] fold=0  EF446131.1       19114 bp  uid=151564206
+          Lake Victoria marburgvirus - Ravn, complete genome
+
+  Lloviu  (6 isolates)
+    [0] fold=0  NC_016144.1      18927 bp  uid=355469071
+          Lloviu cuevavirus isolate Lloviu virus/M.schreibersii-wt/ESP/2003/Asturias-Bat86, complete genome
+    [1] fold=1  OQ630505.1       19019 bp  uid=2526804629
+          Cuevavirus lloviuense isolate Hungary/2019/378, complete genome
+    [2] fold=2  ON186772.1       18861 bp  uid=2431124949
+          Lloviu cuevavirus isolate Italy/2021, complete genome
+    [3] fold=3  MZ541881.1       19019 bp  uid=2191911935
+          Lloviu cuevavirus isolate Hungary/2019/378, complete genome
+    [4] fold=4  MW775011.1       18824 bp  uid=2191632850
+          Lloviu cuevavirus strain LLOV_378 nucleoprotein, VP35, VP40, GP1, GP2, VP30, hypothetical protein, VP24, and RNA polymerase genes, complete cds
+    [5] fold=0  MW775010.1       18824 bp  uid=2191632840
+          Lloviu cuevavirus strain LLOV_378_parasite_1 nucleoprotein, VP35, VP40, GP1, GP2, VP30, hypothetical protein, VP24, and RNA polymerase genes, complete cds
+
+
+## Hepadnaviridae  (8 variants, 71 genomes)
+----------------------------------------------------------------------
+  HBV-genotype-A  (10 isolates)
+    [0] fold=0  LC784044.1        3221 bp  uid=2719244372
+          Hepatitis B virus genotype A HB-DB66 DNA, complete genome
+    [1] fold=1  LC778006.1        3221 bp  uid=2719244303
+          Hepatitis B virus genotype A HB-DB103 DNA, complete genome
+    [2] fold=2  LC778005.1        3197 bp  uid=2719244297
+          Hepatitis B virus genotype A HB-DB89 DNA, complete genome
+    [3] fold=3  LC778004.1        3221 bp  uid=2719244291
+          Hepatitis B virus genotype A HB-DB76 DNA, complete genome
+    [4] fold=4  LC773628.1        3017 bp  uid=2546141133
+          Hepatitis B virus genotype A SYMAV-D0237 DNA, nearly complete genome
+    [5] fold=0  LC773627.1        3221 bp  uid=2546141125
+          Hepatitis B virus genotype A SYMAV-D0236 DNA, complete genome
+    [6] fold=1  LC773620.1        3221 bp  uid=2546141088
+          Hepatitis B virus genotype A SYMAV-D0231 DNA, complete genome
+    [7] fold=2  LC533934.1        3213 bp  uid=1825979606
+          HBV genotype A proviral DNA, complete genome
+    [8] fold=3  LC519823.1        3221 bp  uid=1805473128
+          HBV genotype A B-H06-Ban DNA, complete genome
+    [9] fold=4  LC519820.1        3221 bp  uid=1805473113
+          HBV genotype A B-504-Ban DNA, complete genome
+
+  HBV-genotype-B  (10 isolates)
+    [0] fold=0  LC784057.1        3215 bp  uid=2719244442
+          Hepatitis B virus genotype B HB-DB7 DNA, complete genome
+    [1] fold=1  LC784049.1        3215 bp  uid=2719244400
+          Hepatitis B virus genotype B HB-DB118 DNA, complete genome
+    [2] fold=2  LC784048.1        3215 bp  uid=2719244395
+          Hepatitis B virus genotype B HB-DB116 DNA, complete genome
+    [3] fold=3  LC784047.1        3215 bp  uid=2719244390
+          Hepatitis B virus genotype B HB-DB21 DNA, complete genome
+    [4] fold=4  LC784046.1        3215 bp  uid=2719244384
+          Hepatitis B virus genotype B HB-DB12 DNA, complete genome
+    [5] fold=0  LC784045.1        3215 bp  uid=2719244378
+          Hepatitis B virus genotype B HB-DB11 DNA, complete genome
+    [6] fold=1  LC778015.1        3215 bp  uid=2719244351
+          Hepatitis B virus genotype B HB-DB159 DNA, complete genome
+    [7] fold=2  LC778014.1        3215 bp  uid=2719244346
+          Hepatitis B virus genotype B HB-DB131 DNA, complete genome
+    [8] fold=3  LC778013.1        3215 bp  uid=2719244341
+          Hepatitis B virus genotype B HB-DB130 DNA, complete genome
+    [9] fold=4  LC778012.1        3215 bp  uid=2719244336
+          Hepatitis B virus genotype B HB-DB129 DNA, complete genome
+
+  HBV-genotype-C  (10 isolates)
+    [0] fold=0  LC886239.1        3185 bp  uid=3356338149
+          Hepatitis B virus genotype C Case161-0b DNA, complete genome
+    [1] fold=1  LC886238.1        3215 bp  uid=3356338144
+          Hepatitis B virus genotype C Case161-0a DNA, complete genome
+    [2] fold=2  LC784056.1        3215 bp  uid=2719244436
+          Hepatitis B virus genotype C HB-DB169 DNA, complete genome
+    [3] fold=3  LC784055.1        3215 bp  uid=2719244430
+          Hepatitis B virus genotype C HB-DB168 DNA, complete genome
+    [4] fold=4  LC784054.1        3215 bp  uid=2719244425
+          Hepatitis B virus genotype C HB-DB137 DNA, complete genome
+    [5] fold=0  LC784053.1        3215 bp  uid=2719244420
+          Hepatitis B virus genotype C HB-DB115 DNA, complete genome
+    [6] fold=1  LC784052.1        3215 bp  uid=2719244415
+          Hepatitis B virus genotype C HB-DB109 DNA, complete genome
+    [7] fold=2  LC784051.1        3215 bp  uid=2719244410
+          Hepatitis B virus genotype C HB-DB99 DNA, complete genome
+    [8] fold=3  LC784050.1        3215 bp  uid=2719244405
+          Hepatitis B virus genotype C HB-DB19 DNA, complete genome
+    [9] fold=4  LC778017.1        3215 bp  uid=2719244362
+          Hepatitis B virus genotype C HB-DB136 DNA, complete genome
+
+  HBV-genotype-D  (10 isolates)
+    [0] fold=0  LC852229.1        3182 bp  uid=3054451095
+          HBV genotype D2 HB-DBT29 DNA, complete genome
+    [1] fold=1  LC519824.1        3125 bp  uid=1805473133
+          Hepatitis B virus genotype D B-H10-Ban DNA, complete genome
+    [2] fold=2  LC519816.1        3182 bp  uid=1805473093
+          Hepatitis B virus genotype D B-430-Ban DNA, complete genome
+    [3] fold=3  LC519814.1        3182 bp  uid=1805473083
+          Hepatitis B virus genotype D B-420-Ban DNA, complete genome
+    [4] fold=4  LC519810.1        3161 bp  uid=1805473063
+          Hepatitis B virus genotype D B-407-Ban DNA, complete genome
+    [5] fold=0  LC519809.1        3167 bp  uid=1805473058
+          Hepatitis B virus genotype D B-405-Ban DNA, complete genome
+    [6] fold=1  LC519808.1        3182 bp  uid=1805473053
+          Hepatitis B virus genotype D B-403-Ban DNA, complete genome
+    [7] fold=2  LC519802.1        3182 bp  uid=1805473023
+          Hepatitis B virus genotype D B-341-Ban DNA, complete genome
+    [8] fold=3  LC519795.1        2999 bp  uid=1805472988
+          Hepatitis B virus genotype D B-117-Ban DNA, complete genome
+    [9] fold=4  LC519793.1        3182 bp  uid=1805472978
+          Hepatitis B virus genotype D B-101-Ban DNA, complete genome
+
+  HBV-genotype-E  (10 isolates)
+    [0] fold=0  PP445059.1        3197 bp  uid=2710649641
+          MAG: Hepatitis B virus isolate Senegal/TV012/2021 genotype E, partial genome
+    [1] fold=1  PP445056.1        3221 bp  uid=2710649614
+          MAG: Hepatitis B virus isolate Senegal/BK263/2021 genotype E, partial genome
+    [2] fold=2  PP445055.1        3215 bp  uid=2710649605
+          MAG: Hepatitis B virus isolate Senegal/BK262/2021 genotype E, partial genome
+    [3] fold=3  PP445053.1        3213 bp  uid=2710649588
+          MAG: Hepatitis B virus isolate Senegal/BK120/2020 genotype E, complete genome
+    [4] fold=4  LC773632.1        3221 bp  uid=2546141165
+          Hepatitis B virus genotype E SYMAV-H0235 DNA, complete genome
+    [5] fold=0  LC513657.1        3212 bp  uid=1811249383
+          Hepatitis B virus genotype E 18456-BUR DNA, complete genome
+    [6] fold=1  LC513656.1        3213 bp  uid=1811249378
+          Hepatitis B virus genotype E 18362-BUR DNA, complete genome
+    [7] fold=2  LC513654.1        3212 bp  uid=1811249368
+          Hepatitis B virus genotype E 18200-BUR DNA, complete genome
+    [8] fold=3  LC513652.1        3212 bp  uid=1811249358
+          Hepatitis B virus genotype E 18026-BUR DNA, complete genome
+    [9] fold=4  AP007262.1        3212 bp  uid=62006057
+          Hepatitis B virus genotype E DNA, complete genome, isolate: HB-JI411F
+
+  HBV-genotype-F  (3 isolates)
+    [0] fold=0  HE974369.1        3182 bp  uid=399923454
+          HBV genotype F2 complete genome, isolate Mart-B26
+    [1] fold=1  HE974368.1        3215 bp  uid=399923449
+          HBV genotype F4 complete genome, isolate Mart-B24
+    [2] fold=2  HE974366.1        3215 bp  uid=399923439
+          HBV genotype F2 complete genome, isolate Mart-B18
+
+  HBV-genotype-G  (8 isolates)
+    [0] fold=0  AB625343.1        3179 bp  uid=383082105
+          Hepatitis B virus genotype G DNA, complete genome, isolate: MEX921M
+    [1] fold=1  AB625342.1        3248 bp  uid=383082100
+          Hepatitis B virus genotype G DNA, complete genome, isolate: MEX918M
+    [2] fold=2  AP007264.1        3248 bp  uid=62006071
+          Hepatitis B virus genotype G DNA, complete genome, isolate: HB-JI444GF
+    [3] fold=3  HE981176.1        3248 bp  uid=402169060
+          Hepatitis B virus complete genome, genotype G, clone ARG56.5.9
+    [4] fold=4  HE981174.1        3248 bp  uid=402169046
+          Hepatitis B virus complete genome, genotype G, clone ARG56.1.5
+    [5] fold=0  HE981173.1        3234 bp  uid=402169040
+          Hepatitis B virus complete genome, genotype G, clone BR9.2
+    [6] fold=1  HE981172.1        3236 bp  uid=402169033
+          Hepatitis B virus complete genome, genotype G, clone BR22
+    [7] fold=2  HE981171.1        3236 bp  uid=402169026
+          Hepatitis B virus complete genome, genotype G, clone BR21
+
+  HBV-genotype-H  (10 isolates)
+    [0] fold=0  LC491577.1        3215 bp  uid=1707759566
+          Hepatitis B virus genotype H Itabashi DNA, complete genome
+    [1] fold=1  AB846650.1        3215 bp  uid=530719456
+          Hepatitis B virus genotype H DNA, complete genome, isolate: B-MHJ9014
+    [2] fold=2  AB516395.1        3215 bp  uid=304555517
+          Hepatitis B virus genotype H DNA, complete genome, isolate: MEX914M
+    [3] fold=3  AB516394.1        3215 bp  uid=304555512
+          Hepatitis B virus genotype H DNA, complete genome, isolate: MEX912M
+    [4] fold=4  AB516393.1        3215 bp  uid=304555507
+          Hepatitis B virus genotype H DNA, complete genome, isolate: 904MEXM
+    [5] fold=0  AB298362.1        3215 bp  uid=133778402
+          Hepatitis B virus genotype H DNA, complete genome, isolate: HBV ST0404
+    [6] fold=1  AP007261.1        3218 bp  uid=62006050
+          Hepatitis B virus genotype H DNA, complete genome, isolate: HB-JI260F
+    [7] fold=2  AY090454.1        3215 bp  uid=22135696
+          Hepatitis B virus genotype H strain 1853Nic, complete genome
+    [8] fold=3  AB179747.1        3215 bp  uid=60115422
+          Hepatitis B virus (genotype H) genomic DNA, complete genome, isolate: HB-JBDH1
+    [9] fold=4  AB275308.1        3215 bp  uid=122703723
+          Hepatitis B virus DNA, complete genome, genotype: H
+
+
+## Retroviridae  (3 variants, 21 genomes)
+----------------------------------------------------------------------
+  HIV-1-subtype-B  (7 isolates)
+    [0] fold=0  AF075719.1        9493 bp  uid=3511259
+          HIV-1 isolate MN clone MNTQ from the USA, complete genome
+    [1] fold=1  M17451.1          9128 bp  uid=328565
+          Human immunodeficiency virus type 1, isolate RF (HAT-3), complete genome
+    [2] fold=2  AF004394.1        9715 bp  uid=2281652
+          HIV-1 strain ADA clone AD8, complete genome
+    [3] fold=3  U21135.1          9720 bp  uid=1772624
+          Human immunodeficiency virus type 1 clone WEAU 1.60, complete genome
+    [4] fold=4  K02013.1          9229 bp  uid=326417
+          Human immunodeficiency virus type 1, isolate BRU, complete genome (LAV-1)
+    [5] fold=0  K03455.1          9719 bp  uid=1906382
+          Human immunodeficiency virus type 1 (HXB2), complete genome; HIV1/HTLV-III/LAV reference genome
+    [6] fold=1  M17449.1          9738 bp  uid=328030
+          Human immunodeficiency virus type 1, isolate MN, complete genome
+
+  HIV-1-subtype-C  (4 isolates)
+    [0] fold=0  AB023804.1        9680 bp  uid=6016887
+          Human immunodeficiency virus 1 subtype C genomic RNA, complete genome
+    [1] fold=1  AY162225.1        9691 bp  uid=26000273
+          HIV-1 strain TV012 clone 2/1_4 subtype C from South Africa, complete genome
+    [2] fold=2  AY162224.1        9738 bp  uid=26000263
+          HIV-1 strain TV002 clone 12/5_1 subtype C from South Africa, complete genome
+    [3] fold=3  AY162223.1        9781 bp  uid=26000253
+          HIV-1 strain TV001 clone 8_5 subtype C from South Africa, complete genome
+
+  HIV-2  (10 isolates)
+    [0] fold=0  NC_001722.1      10359 bp  uid=9628880
+          Human immunodeficiency virus 2, complete genome
+    [1] fold=1  LC927254.1       10266 bp  uid=3275119394
+          Human immunodeficiency virus 2 08JP.NMC842 proviral DNA, complete genome
+    [2] fold=2  LC927253.1       10235 bp  uid=3275119384
+          Human immunodeficiency virus 2 07JP.NMC716 proviral DNA, complete genome
+    [3] fold=3  AB100245.1        9339 bp  uid=32879750
+          Human immunodeficiency virus 2 01JP-IMCJ/KR020.1 proviral DNA, nearly complete genome
+    [4] fold=4  M30895.1          9480 bp  uid=325709
+          Human immunodeficiency virus type 2 (isolate GH-1) proviral DNA complete genome, clone 8
+    [5] fold=0  AB731745.1       10240 bp  uid=442564818
+          Human immunodeficiency virus 2 proviral DNA, complete genome, clone: 08JP_NMC842_clone_23
+    [6] fold=1  AB731743.1       10301 bp  uid=442564798
+          Human immunodeficiency virus 2 proviral DNA, complete genome, clone: 08JP_NMC786_clone_43
+    [7] fold=2  AB731742.1       10301 bp  uid=442564788
+          Human immunodeficiency virus 2 proviral DNA, complete genome, clone: 08JP_NMC786_clone_41
+    [8] fold=3  AB731741.1       10213 bp  uid=442564778
+          Human immunodeficiency virus 2 proviral DNA, complete genome, clone: 07JP_NMC716_clone_03
+    [9] fold=4  AB731740.1       10213 bp  uid=442564768
+          Human immunodeficiency virus 2 proviral DNA, complete genome, clone: 07JP_NMC716_clone_01
+
+
+## Herpesviridae  (8 variants, 76 genomes)
+----------------------------------------------------------------------
+  HSV-1  (10 isolates)
+    [0] fold=0  NC_001806.2     152222 bp  uid=820945227
+          Human herpesvirus 1 strain 17, complete genome
+    [1] fold=1  PZ169719.1      150670 bp  uid=3346847444
+          Human alphaherpesvirus 1 strain Z_d40_skin_culture, complete genome
+    [2] fold=2  PZ169717.1      150427 bp  uid=3346847290
+          Human alphaherpesvirus 1 strain Z_d10_skin, complete genome
+    [3] fold=3  PZ169716.1      150594 bp  uid=3346847289
+          Human alphaherpesvirus 1 strain Z_d10_culture, complete genome
+    [4] fold=4  PZ169713.1      150753 bp  uid=3346847057
+          Human alphaherpesvirus 1 strain Z_d9_eye_culture, complete genome
+    [5] fold=0  PZ169711.1      150403 bp  uid=3346846901
+          Human alphaherpesvirus 1 strain F_d10_plasma_culture, complete genome
+    [6] fold=1  PZ169710.1      150681 bp  uid=3346846824
+          Human alphaherpesvirus 1 strain D_d12_skin, complete genome
+    [7] fold=2  PZ169709.1      150287 bp  uid=3346846747
+          Human alphaherpesvirus 1 strain D_d12_skin_culture, complete genome
+    [8] fold=3  PZ169698.1      150642 bp  uid=3346845895
+          Human alphaherpesvirus 1 strain B_d9_pharynx, complete genome
+    [9] fold=4  PZ169696.1      151056 bp  uid=3346845741
+          Human alphaherpesvirus 1 strain B_d8_plasma, complete genome
+
+  HSV-2  (10 isolates)
+    [0] fold=0  NC_001798.2     154675 bp  uid=820945149
+          Human herpesvirus 2 strain HG52, complete genome
+    [1] fold=1  PZ135825.1      155875 bp  uid=3248754895
+          Human alphaherpesvirus 2 isolate 51-SV_uncultured, complete genome
+    [2] fold=2  OM370995.1      155498 bp  uid=2199428945
+          Human alphaherpesvirus 2 strain G, complete genome
+    [3] fold=3  MK855052.1      155975 bp  uid=1839357457
+          Human alphaherpesvirus 2 strain MS, complete genome
+    [4] fold=4  MN187895.1      156293 bp  uid=1817985248
+          Human alphaherpesvirus 2 isolate HJ12, complete genome
+    [5] fold=0  LT799380.1      138917 bp  uid=1154066553
+          Human herpesvirus 2 isolate 9 genome assembly, complete genome: monopartite
+    [6] fold=1  LT797786.1      138939 bp  uid=1152067401
+          Human herpesvirus 2 isolate 16 genome assembly, complete genome: monopartite
+    [7] fold=2  LT797682.1      138881 bp  uid=1152067400
+          Human herpesvirus 2 isolate 18 genome assembly, complete genome: monopartite
+    [8] fold=3  LT797636.1      138913 bp  uid=1152067399
+          Human herpesvirus 2 isolate 17 genome assembly, complete genome: monopartite
+    [9] fold=4  LT797635.1      138769 bp  uid=1152067398
+          Human herpesvirus 2 isolate 11 genome assembly, complete genome: monopartite
+
+  VZV  (10 isolates)
+    [0] fold=0  NC_001348.1     124884 bp  uid=9625875
+          Human herpesvirus 3, complete genome
+    [1] fold=1  PV061461.1      124866 bp  uid=2918407279
+          Human alphaherpesvirus 3 Assam.INDIA/GMCH/VZV01, complete genome
+    [2] fold=2  PQ641243.1      124848 bp  uid=2889878048
+          Human alphaherpesvirus 3 isolate PS24, complete genome
+    [3] fold=3  PQ505474.1      124668 bp  uid=2855100227
+          Human alphaherpesvirus 3 isolate KE_23082024, complete genome
+    [4] fold=4  PP261332.1      125466 bp  uid=2694744273
+          UNVERIFIED: Human alphaherpesvirus 3 isolate NSYY3, complete genome
+    [5] fold=0  PP261331.1      125610 bp  uid=2694744199
+          Human alphaherpesvirus 3 isolate NSYY1, complete genome
+    [6] fold=1  PP386307.1      124707 bp  uid=2694742488
+          Human alphaherpesvirus 3 strain MBC048, complete genome
+    [7] fold=2  PP169944.1      124854 bp  uid=2658863158
+          Human alphaherpesvirus 3 isolate VZV-2/NIH-Pakistan/2023, complete genome
+    [8] fold=3  OQ916050.1      124889 bp  uid=2577521086
+          Human alphaherpesvirus 3 isolate MCL-22-H-32-5616_DNA_644, complete genome
+    [9] fold=4  OQ916049.1      124822 bp  uid=2577521034
+          UNVERIFIED: Human alphaherpesvirus 3 isolate MCL-22-H-22-5441_DNA_643, complete genome
+
+  EBV  (10 isolates)
+    [0] fold=0  NC_009334.1     172764 bp  uid=139424470
+          Human herpesvirus 4, complete genome
+    [1] fold=1  NC_007605.1     171823 bp  uid=82503188
+          Human gammaherpesvirus 4, complete genome
+    [2] fold=2  OR134772.1      176176 bp  uid=2727548850
+          Human gammaherpesvirus 4 isolate YCC-10, complete genome
+    [3] fold=3  OR134771.1      169424 bp  uid=2727548809
+          Human gammaherpesvirus 4 isolate SNU-719, complete genome
+    [4] fold=4  OR134770.1      171437 bp  uid=2727548777
+          Human gammaherpesvirus 4 isolate Raji, complete genome
+    [5] fold=0  OR134769.1      173200 bp  uid=2727548735
+          Human gammaherpesvirus 4 isolate NPC43, complete genome
+    [6] fold=1  OR134768.1      170964 bp  uid=2727548694
+          Human gammaherpesvirus 4 isolate M81, complete genome
+    [7] fold=2  OR134767.1      171946 bp  uid=2727548654
+          Human gammaherpesvirus 4 isolate C666-1, complete genome
+    [8] fold=3  OR134766.1      166363 bp  uid=2727548610
+          Human gammaherpesvirus 4 isolate C17, complete genome
+    [9] fold=4  OR134765.1      162698 bp  uid=2727548570
+          Human gammaherpesvirus 4 isolate B95-8, complete genome
+
+  HCMV  (10 isolates)
+    [0] fold=0  NC_006273.2     235646 bp  uid=155573622
+          Human herpesvirus 5 strain Merlin, complete genome
+    [1] fold=1  PZ137009.1      232182 bp  uid=3334157317
+          Human betaherpesvirus 5 strain Towne, complete genome
+    [2] fold=2  LC846339.1      235700 bp  uid=3069859668
+          Human betaherpesvirus 5 20026 DNA, complete genome
+    [3] fold=3  LC846338.1      235198 bp  uid=3069859500
+          Human betaherpesvirus 5 22383 DNA, complete genome
+    [4] fold=4  PX246278.1      231043 bp  uid=3057916491
+          Human betaherpesvirus 5 isolate BR/2023-012844/IEC/NS/2023, complete genome
+    [5] fold=0  PQ851844.1      233804 bp  uid=2993367251
+          Human betaherpesvirus 5 isolate B-234, complete genome
+    [6] fold=1  PQ851843.1      233819 bp  uid=2993367090
+          Human betaherpesvirus 5 isolate B-209, complete genome
+    [7] fold=2  PQ851842.1      233822 bp  uid=2993366929
+          Human betaherpesvirus 5 isolate B-192, complete genome
+    [8] fold=3  PQ851841.1      233855 bp  uid=2993366768
+          Human betaherpesvirus 5 isolate B-178, complete genome
+    [9] fold=4  PQ851840.1      233799 bp  uid=2993366607
+          Human betaherpesvirus 5 isolate B-164, complete genome
+
+  HHV-6A  (10 isolates)
+    [0] fold=0  NC_001664.4     159378 bp  uid=1344462938
+          Human betaherpesvirus 6A, variant A DNA, complete virion genome, isolate U1102
+    [1] fold=1  PP921919.1      156792 bp  uid=2747363984
+          Human betaherpesvirus 6A isolate MBC025, partial genome
+    [2] fold=2  MW049322.1      140968 bp  uid=1914215702
+          Human betaherpesvirus 6A strain HHV6A_LF5A, partial genome
+    [3] fold=3  MW049321.1      147118 bp  uid=1914215613
+          Human betaherpesvirus 6A strain HHV6A_LF3A, partial genome
+    [4] fold=4  MW049319.1      143354 bp  uid=1914215439
+          Human betaherpesvirus 6A strain HHV6A_LF1A, partial genome
+    [5] fold=0  MW049318.1      147459 bp  uid=1914215350
+          Human betaherpesvirus 6A strain HHV6A_HGDP00628, partial genome
+    [6] fold=1  MW049317.1      147112 bp  uid=1914215261
+          Human betaherpesvirus 6A strain HHV6A_506035, partial genome
+    [7] fold=2  MW049316.1      142532 bp  uid=1914215175
+          Human betaherpesvirus 6A strain HHV6A_303046, partial genome
+    [8] fold=3  MW049315.1      142751 bp  uid=1914215090
+          Human betaherpesvirus 6A strain HHV6A_303035, partial genome
+    [9] fold=4  MW049314.1      140481 bp  uid=1914215005
+          Human betaherpesvirus 6A strain HHV6A_107040, partial genome
+
+  HHV-6B  (6 isolates)
+    [0] fold=0  NC_000898.1     162114 bp  uid=9633069
+          Human herpesvirus 6B, complete genome
+    [1] fold=1  OR643889.1      162025 bp  uid=2601014637
+          Human betaherpesvirus 6B isolate AA-51, complete genome
+    [2] fold=2  MW536483.1      162121 bp  uid=1992372275
+          Human betaherpesvirus 6B strain Z29, complete genome
+    [3] fold=3  MH698402.1      162076 bp  uid=1603483844
+          Human betaherpesvirus 6B strain GTEX-OXRO_icihv6b, complete genome
+    [4] fold=4  MH698401.1      161973 bp  uid=1603483791
+          Human betaherpesvirus 6B strain GTEX-YF7O_icihhv6b, complete genome
+    [5] fold=0  AB021506.1      161573 bp  uid=4995977
+          Human herpesvirus 6B DNA, complete genome, strain: HST
+
+  HHV-7  (10 isolates)
+    [0] fold=0  NC_001716.2     153080 bp  uid=51874225
+          Human herpesvirus 7, complete genome
+    [1] fold=1  PV694273.1      150870 bp  uid=3101627359
+          UNVERIFIED: Human betaherpesvirus 7 isolate BB5379, complete genome
+    [2] fold=2  PV694272.1      151014 bp  uid=3101627358
+          UNVERIFIED: Human betaherpesvirus 7 isolate BB5371, complete genome
+    [3] fold=3  PV694271.1      151631 bp  uid=3101627357
+          UNVERIFIED: Human betaherpesvirus 7 isolate BB5269, complete genome
+    [4] fold=4  PQ541394.1      148303 bp  uid=2911517030
+          MAG: Human betaherpesvirus 7 isolate HHV7-1-wuxi genomic sequence
+    [5] fold=0  OR634980.1      144752 bp  uid=2597795808
+          Human betaherpesvirus 7 isolate FIN-6, partial genome
+    [6] fold=1  OR634979.1      144747 bp  uid=2597795768
+          Human betaherpesvirus 7 isolate FIN-5, partial genome
+    [7] fold=2  ON023041.1      152524 bp  uid=2238292329
+          Human betaherpesvirus 7 isolate FIN-4, partial genome
+    [8] fold=3  ON023040.1      147997 bp  uid=2238292260
+          Human betaherpesvirus 7 isolate FIN-3, partial genome
+    [9] fold=4  ON023039.1      149223 bp  uid=2238292191
+          Human betaherpesvirus 7 isolate FIN-2, partial genome
+
+
+## Picornaviridae  (8 variants, 80 genomes)
+----------------------------------------------------------------------
+  Poliovirus-1  (10 isolates)
+    [0] fold=0  PP506141.1        7441 bp  uid=2809804521
+          Poliovirus 1 isolate S46/10, complete genome
+    [1] fold=1  PP506140.1        7441 bp  uid=2809804519
+          Poliovirus 1 isolate S358/09, complete genome
+    [2] fold=2  PP506139.1        7441 bp  uid=2809804517
+          Poliovirus 1 isolate S326/09, complete genome
+    [3] fold=3  OR129532.1        7354 bp  uid=2789743710
+          Poliovirus 1 strain P2149 cold variant, complete genome
+    [4] fold=4  PP068134.1        7441 bp  uid=2664565847
+          Mutant Poliovirus 1 isolate USA/23-S19-Mah_PV1, complete genome
+    [5] fold=0  PP068131.1        7441 bp  uid=2664565789
+          Mutant Poliovirus 1 isolate USA/23-S19-1_PV1, complete genome
+    [6] fold=1  OR253701.1        7506 bp  uid=2577287697
+          Poliovirus 1 isolate nOPV1, complete genome
+    [7] fold=2  OQ286212.1        7361 bp  uid=2449912056
+          Poliovirus 1 isolate 23_05_19, complete genome
+    [8] fold=3  OQ286211.1        7361 bp  uid=2449912054
+          Poliovirus 1 isolate 21_03_19, complete genome
+    [9] fold=4  OQ286208.1        7361 bp  uid=2449912048
+          Poliovirus 1 isolate 20_06_19, complete genome
+
+  Poliovirus-2  (10 isolates)
+    [0] fold=0  PX725683.1        7439 bp  uid=3134038678
+          Poliovirus 2 isolate BOT/2023-23652, complete genome
+    [1] fold=1  PX725682.1        7501 bp  uid=3134038676
+          Poliovirus 2 isolate BOT/2023-23651, complete genome
+    [2] fold=2  PX725681.1        7501 bp  uid=3134038674
+          Poliovirus 2 isolate BOT/2023-23650, complete genome
+    [3] fold=3  PX725680.1        7501 bp  uid=3134038672
+          Poliovirus 2 isolate BOT/2023-23649, complete genome
+    [4] fold=4  PX725679.1        7501 bp  uid=3134038670
+          Poliovirus 2 isolate BOT/2023-23648, complete genome
+    [5] fold=0  PX725678.1        7500 bp  uid=3134038668
+          Poliovirus 2 isolate BOT/2023-23647, complete genome
+    [6] fold=1  PX725677.1        7439 bp  uid=3134038666
+          Poliovirus 2 isolate BOT/2022-23659, complete genome
+    [7] fold=2  PX725676.1        7439 bp  uid=3134038664
+          Poliovirus 2 isolate BOT/2022-23658, complete genome
+    [8] fold=3  PX725675.1        7439 bp  uid=3134038662
+          Poliovirus 2 isolate BOT/2022-23657, complete genome
+    [9] fold=4  PX725674.1        7439 bp  uid=3134038660
+          Poliovirus 2 isolate BOT/2022-23656, complete genome
+
+  Poliovirus-3  (10 isolates)
+    [0] fold=0  PZ134350.1        7432 bp  uid=3247991406
+          Poliovirus 3 isolate ZJ-23-8-1, complete genome
+    [1] fold=1  PP356987.1        6621 bp  uid=2783608783
+          Poliovirus 3 isolate 55183RJ24-BR polyprotein gene, complete cds
+    [2] fold=2  PP356986.1        6621 bp  uid=2783608781
+          Poliovirus 3 isolate 55820RJ24-BR polyprotein gene, complete cds
+    [3] fold=3  PP348560.1        7456 bp  uid=2783608777
+          Poliovirus 3 isolate 53459RJ24-BR polyprotein gene, complete cds
+    [4] fold=4  PP348559.1        7380 bp  uid=2783608775
+          Poliovirus 3 isolate 53394RJ24-BR polyprotein gene, complete cds
+    [5] fold=0  PP348558.1        7417 bp  uid=2783608773
+          Poliovirus 3 isolate 45507RJ24BR polyprotein gene, complete cds
+    [6] fold=1  PP533225.1        7431 bp  uid=2809804541
+          Poliovirus 3 isolate S11/17, complete genome
+    [7] fold=2  PP533224.1        7431 bp  uid=2809804539
+          Poliovirus 3 isolate S310/16, complete genome
+    [8] fold=3  PP533223.1        7432 bp  uid=2809804537
+          Poliovirus 3 isolate S335/16, complete genome
+    [9] fold=4  PP533222.1        7431 bp  uid=2809804535
+          Poliovirus 3 isolate S396/19, complete genome
+
+  Coxsackievirus-A16  (10 isolates)
+    [0] fold=0  PV173118.1        7324 bp  uid=2927316225
+          Coxsackievirus A16 isolate AI008F1, complete genome
+    [1] fold=1  PV173117.1        7322 bp  uid=2927316223
+          Coxsackievirus A16 isolate BC022S, complete genome
+    [2] fold=2  PV173116.1        7305 bp  uid=2927316221
+          Coxsackievirus A16 isolate BC008S, complete genome
+    [3] fold=3  PV173115.1        7282 bp  uid=2927316219
+          Coxsackievirus A16 isolate BI004S3, complete genome
+    [4] fold=4  PV173114.1        7250 bp  uid=2927316217
+          Coxsackievirus A16 isolate AS050, complete genome
+    [5] fold=0  PV173113.1        7251 bp  uid=2927316215
+          Coxsackievirus A16 isolate AI009F1, complete genome
+    [6] fold=1  PV173112.1        7299 bp  uid=2927316213
+          Coxsackievirus A16 isolate AI008F2, complete genome
+    [7] fold=2  OQ091687.1        7393 bp  uid=2515310519
+          Coxsackievirus A16 strain CVA16_210048711501_FRA21, complete genome
+    [8] fold=3  OQ091686.1        7393 bp  uid=2515310517
+          Coxsackievirus A16 strain CVA16_180026708702_FRA18, complete genome
+    [9] fold=4  OQ091685.1        7394 bp  uid=2515310515
+          Coxsackievirus A16 strain CVA16_180029339302_FRA18, complete genome
+
+  Coxsackievirus-B3  (10 isolates)
+    [0] fold=0  NC_038307.1       7399 bp  uid=1464306883
+          Coxsackievirus B3 mRNA, complete genome
+    [1] fold=1  PZ117059.1        7363 bp  uid=3324899151
+          Coxsackievirus B3 isolate SPb_12378/25mi/TA/NNovgorod/2025/RU, complete genome
+    [2] fold=2  PZ117057.1        7378 bp  uid=3324899147
+          Coxsackievirus B3 isolate SPb_12331/25EVI/Kostroma/2025/RU, complete genome
+    [3] fold=3  PV863042.1        7386 bp  uid=3070891594
+          Coxsackievirus B3 isolate KM50-W07-P20, complete genome
+    [4] fold=4  PV863041.1        7383 bp  uid=3070891592
+          Coxsackievirus B3 isolate KM50-W07-P15, complete genome
+    [5] fold=0  PV863040.1        7384 bp  uid=3070891590
+          Coxsackievirus B3 isolate KM50-W07-P10, complete genome
+    [6] fold=1  PV863039.1        7379 bp  uid=3070891588
+          Coxsackievirus B3 isolate KM50-W07-P5, complete genome
+    [7] fold=2  PV863038.1        7383 bp  uid=3070891586
+          Coxsackievirus B3 isolate KM50-W07-P1, complete genome
+    [8] fold=3  PV863037.1        7378 bp  uid=3070891584
+          Coxsackievirus B3 isolate KM22-W05-P20, complete genome
+    [9] fold=4  PV863036.1        7381 bp  uid=3070891582
+          Coxsackievirus B3 isolate KM22-W05-P15, complete genome
+
+  Rhinovirus-A  (10 isolates)
+    [0] fold=0  NC_038311.1       7137 bp  uid=1464306962
+          Human rhinovirus 1 strain ATCC VR-1559, complete genome
+    [1] fold=1  NC_001617.1       7152 bp  uid=9627730
+          Human rhinovirus 89, complete genome
+    [2] fold=2  PZ233729.1        7106 bp  uid=3353254151
+          Rhinovirus A101 isolate 23V-12724_250120007 polyprotein gene, complete cds
+    [3] fold=3  PZ233728.1        7099 bp  uid=3353254149
+          Rhinovirus A98 isolate 23V-8489_250120023 polyprotein gene, complete cds
+    [4] fold=4  PZ233726.1        7037 bp  uid=3353254145
+          Rhinovirus A18 isolate 23V-8677_250123004 polyprotein gene, partial cds
+    [5] fold=0  PZ233721.1        7099 bp  uid=3353254135
+          Rhinovirus A101 isolate 23V-12723_250120006 polyprotein gene, complete cds
+    [6] fold=1  PZ233720.1        7102 bp  uid=3353254133
+          Rhinovirus A106 isolate 23V-12705_250117018 polyprotein gene, complete cds
+    [7] fold=2  PZ233719.1        7107 bp  uid=3353254131
+          Rhinovirus A40 isolate 23V-12698_250117013 polyprotein gene, complete cds
+    [8] fold=3  PZ233717.1        7046 bp  uid=3353254127
+          Rhinovirus A12 isolate 23V-12375_250116002 polyprotein gene, partial cds
+    [9] fold=4  PZ233716.1        7111 bp  uid=3353254125
+          Rhinovirus A98 isolate 23V-12363_250115017 polyprotein gene, complete cds
+
+  Rhinovirus-B  (10 isolates)
+    [0] fold=0  NC_001490.1       7212 bp  uid=9626735
+          Rhinovirus B14, complete sequence
+    [1] fold=1  NC_038312.1       7208 bp  uid=1464306975
+          Human rhinovirus 3, complete genome
+    [2] fold=2  PZ233731.1        7045 bp  uid=3353254155
+          Rhinovirus B83 isolate 23V-8478_250120013 polyprotein gene, complete cds
+    [3] fold=3  PZ233730.1        7054 bp  uid=3353254153
+          Rhinovirus B83 isolate 23V-8477_250120012 polyprotein gene, complete cds
+    [4] fold=4  PX404530.1        6950 bp  uid=3332198530
+          MAG: Rhinovirus B isolate HRVB/human/UGA/UVRI-KWL0300/2021 genomic sequence
+    [5] fold=0  PX404528.1        7077 bp  uid=3332198526
+          MAG: Rhinovirus B isolate HRVB/human/UGA/UVRI-KWL0289/2021 genomic sequence
+    [6] fold=1  PX404526.1        7184 bp  uid=3332198522
+          MAG: Rhinovirus B isolate HRVB/human/UGA/UVRI-KWL0299/2021 genomic sequence
+    [7] fold=2  PX404525.1        6924 bp  uid=3332198520
+          MAG: Rhinovirus B isolate HRVB/human/UGA/UVRI-KWL0270/2021 genomic sequence
+    [8] fold=3  PX404521.1        6791 bp  uid=3332198512
+          MAG: Rhinovirus B isolate HRVB/human/UGA/UVRI-KWL0249/2021 genomic sequence
+    [9] fold=4  PX404518.1        7212 bp  uid=3332198506
+          MAG: Rhinovirus B isolate HRVB/human/UGA/UVRI-KWL0193/2021 genomic sequence
+
+  Rhinovirus-C  (10 isolates)
+    [0] fold=0  NC_038878.1       6944 bp  uid=1464310212
+          Human rhinovirus NAT001 polyprotein gene, complete cds
+    [1] fold=1  NC_009996.1       7099 bp  uid=160700581
+          Human rhinovirus C, complete genome
+    [2] fold=2  PZ496045.1        6890 bp  uid=3342271144
+          UNVERIFIED: Rhinovirus C isolate HRV_INS004/LOR/PER/2025, partial genome
+    [3] fold=3  PZ496041.1        7036 bp  uid=3342271140
+          UNVERIFIED: Rhinovirus C isolate HRV_INS001/LOR/PER/2025, partial genome
+    [4] fold=4  PZ233732.1        6911 bp  uid=3353254157
+          Rhinovirus C45 isolate 23V-8642_250122011 polyprotein gene, partial cds
+    [5] fold=0  PZ233727.1        6949 bp  uid=3353254147
+          Rhinovirus C45 isolate 23V-8673_250122023 polyprotein gene, complete cds
+    [6] fold=1  PZ233725.1        7004 bp  uid=3353254143
+          Rhinovirus C43 isolate 23V-8711_250123023 polyprotein gene, partial cds
+    [7] fold=2  PZ233724.1        6884 bp  uid=3353254141
+          Rhinovirus C45 isolate 23V-8869_250124013 polyprotein gene, partial cds
+    [8] fold=3  PZ233723.1        6747 bp  uid=3353254139
+          Rhinovirus C10 isolate 23V-9021_250124021 polyprotein gene, partial cds
+    [9] fold=4  PZ233722.1        7040 bp  uid=3353254137
+          Rhinovirus C43 isolate 23V-9029_250127006 polyprotein gene, complete cds
+
+
+## Paramyxoviridae  (8 variants, 80 genomes)
+----------------------------------------------------------------------
+  Measles  (10 isolates)
+    [0] fold=0  NC_001498.1      15894 bp  uid=9626945
+          Measles virus, complete genome
+    [1] fold=1  PZ562648.1       15894 bp  uid=3351961535
+          Measles virus genotype A strain CAM/RB, complete genome
+    [2] fold=2  PZ569392.1       15471 bp  uid=3351228733
+          Measles virus genotype B3 isolate MVs/Oregon.USA/29.24/UT-UPHL-260612525206 [B3], partial genome
+    [3] fold=3  PZ569391.1       15767 bp  uid=3351228724
+          Measles virus genotype D8 isolate MVs/Utah.USA/22.26/UT-UPHL-260612191961 [D8], partial genome
+    [4] fold=4  PZ569390.1       15757 bp  uid=3351228715
+          Measles virus genotype D8 isolate MVs/Utah.USA/23.26/UT-UPHL-260612024232 [D8], partial genome
+    [5] fold=0  PZ569389.1       15742 bp  uid=3351228706
+          Measles virus genotype D8 isolate MVs/Oregon.USA/14.26/UT-UPHL-260612133145 [D8], partial genome
+    [6] fold=1  PZ569388.1       15778 bp  uid=3351228697
+          Measles virus genotype B3 isolate MVs/Oregon.USA/29.24/UT-UPHL-260612382058 [B3], partial genome
+    [7] fold=2  PZ569387.1       15636 bp  uid=3351228688
+          Measles virus genotype B3 isolate MVs/Oregon.USA/33.24/UT-UPHL-260612506374 [B3], partial genome
+    [8] fold=3  PZ569386.1       15798 bp  uid=3351228679
+          Measles virus genotype B3 isolate MVs/Oregon.USA/28.24/UT-UPHL-260612103963 [B3], partial genome
+    [9] fold=4  PZ569385.1       15732 bp  uid=3351228670
+          Measles virus genotype B3 isolate MVs/Oregon.USA/32.24/UT-UPHL-260612294201 [B3], partial genome
+
+  Mumps  (10 isolates)
+    [0] fold=0  NC_002200.1      15384 bp  uid=9695415
+          Mumps orthorubulavirus genomic RNA, complete genome
+    [1] fold=1  PX475736.1       15384 bp  uid=3101598070
+          Mumps virus genotype C isolate MuVs/Shandong.CHN/10.25[C], complete genome
+    [2] fold=2  PV668547.1       15349 bp  uid=2986880632
+          Mumps virus genotype F strain MuVi/Linyi.CHN/27.18/2[F], complete genome
+    [3] fold=3  PV668546.1       15349 bp  uid=2986880622
+          Mumps virus genotype F strain MuVi/Linyi.CHN/26.18/6[F], complete genome
+    [4] fold=4  PV668541.1       15350 bp  uid=2986880572
+          Mumps virus genotype F strain MuVi/Linyi.CHN/26.18/2[F], complete genome
+    [5] fold=0  PV668540.1       15349 bp  uid=2986880562
+          Mumps virus genotype F strain MuVi/Linyi.CHN/26.18/1[F], complete genome
+    [6] fold=1  PV668539.1       15349 bp  uid=2986880552
+          Mumps virus genotype F strain Muvi/Jinan.China/20.06[F], complete genome
+    [7] fold=2  PV668538.1       15348 bp  uid=2986880542
+          Mumps virus genotype F strain Muvi/Dezhou.China/37.06[F], complete genome
+    [8] fold=3  PV668537.1       15347 bp  uid=2986880532
+          Mumps virus genotype F strain Muvi/Jinan.China/12.06/2[F], complete genome
+    [9] fold=4  PV668536.1       15342 bp  uid=2986880522
+          Mumps virus genotype F strain Muvi/Zibo.China/11.06/2[F], complete genome
+
+  RSV-A  (10 isolates)
+    [0] fold=0  NC_001803.1      15191 bp  uid=9629367
+          Human respiratory syncytial virus A isolate HRSV/A/UK/S2.ts1C/1995, complete genome
+    [1] fold=1  PZ612962.1       15044 bp  uid=3353263640
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-999-0100, partial genome
+    [2] fold=2  PZ612961.1       14536 bp  uid=3353263628
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-023-0219, partial genome
+    [3] fold=3  PZ612960.1       15050 bp  uid=3353263616
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-023-0215, partial genome
+    [4] fold=4  PZ612959.1       15064 bp  uid=3353263604
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-023-0213, partial genome
+    [5] fold=0  PZ612958.1       15048 bp  uid=3353263592
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-023-0208, partial genome
+    [6] fold=1  PZ612957.1       15058 bp  uid=3353263580
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-023-0206, partial genome
+    [7] fold=2  PZ612956.1       15065 bp  uid=3353263568
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-023-0203, partial genome
+    [8] fold=3  PZ612955.1       14855 bp  uid=3353263556
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-023-0171, partial genome
+    [9] fold=4  PZ612954.1       15069 bp  uid=3353263544
+          Human respiratory syncytial virus A isolate IL-RIPHL-RSV-023-0132, partial genome
+
+  RSV-B  (10 isolates)
+    [0] fold=0  PZ575938.1       15143 bp  uid=3351212240
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04823, partial genome
+    [1] fold=1  PZ575937.1       14870 bp  uid=3351212228
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04822, partial genome
+    [2] fold=2  PZ575936.1       15142 bp  uid=3351212216
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04821, partial genome
+    [3] fold=3  PZ575935.1       15140 bp  uid=3351212204
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04820, partial genome
+    [4] fold=4  PZ575934.1       14872 bp  uid=3351212192
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04819, partial genome
+    [5] fold=0  PZ575933.1       14873 bp  uid=3351212180
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04818, partial genome
+    [6] fold=1  PZ575932.1       15140 bp  uid=3351212168
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04817, partial genome
+    [7] fold=2  PZ575931.1       14871 bp  uid=3351212156
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04816, partial genome
+    [8] fold=3  PZ575930.1       15141 bp  uid=3351212144
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04815, partial genome
+    [9] fold=4  PZ575929.1       14872 bp  uid=3351212132
+          Human respiratory syncytial virus B isolate MN-MDH-RSVB-04814, partial genome
+
+  Human-Parainfluenza-1  (10 isolates)
+    [0] fold=0  NC_003461.1      15600 bp  uid=19718363
+          Human parainfluenza virus 1, complete genome
+    [1] fold=1  LC817390.1       15577 bp  uid=2735595756
+          Human respirovirus 1 PIV1_Fukushima_OR710_2022 RNA, complete genome
+    [2] fold=2  LC817389.1       15581 bp  uid=2735595747
+          Human respirovirus 1 PIV1_Fukushima_OR692_2022 RNA, complete genome
+    [3] fold=3  LC720862.1       15588 bp  uid=2278964296
+          Human respirovirus 1 PIV1_Fukushima_O81_2018 viral cRNA, nearly complete genome
+    [4] fold=4  PX380303.1       15356 bp  uid=3071717541
+          Human respirovirus 1 isolate hPIV1/Russia/SPE-RII-4088S/2025, complete genome
+    [5] fold=0  PX380302.1       15356 bp  uid=3071717533
+          Human respirovirus 1 isolate hPIV1/Russia/SPE-RII-3664S/2025, complete genome
+    [6] fold=1  PX380301.1       15356 bp  uid=3071717525
+          Human respirovirus 1 isolate hPIV1/Russia/SPE-RII-3213S/2025, complete genome
+    [7] fold=2  PX380300.1       15356 bp  uid=3071717517
+          Human respirovirus 1 isolate hPIV1/Russia/SPE-RII-2354S/2025, complete genome
+    [8] fold=3  PX380299.1       15356 bp  uid=3071717509
+          Human respirovirus 1 isolate hPIV1/Russia/SPE-RII-1245S/2025, complete genome
+    [9] fold=4  PX380298.1       15356 bp  uid=3071717501
+          Human respirovirus 1 isolate hPIV1/Russia/SPE-RII-1210S/2024, complete genome
+
+  Human-Parainfluenza-3  (10 isolates)
+    [0] fold=0  NC_075446.1      15462 bp  uid=2500367884
+          Human parainfluenza virus 3 strain ZHYMgz01, complete genome
+    [1] fold=1  NC_001796.2      15462 bp  uid=10937870
+          Human parainfluenza virus 3, complete genome
+    [2] fold=2  LC817398.1       15457 bp  uid=2735595828
+          Human respirovirus 3 PIV3_Fukushima_OR913_2023 RNA, complete genome
+    [3] fold=3  LC720880.1       15459 bp  uid=2278964453
+          Human respirovirus 3 PIV3_Fukushima_OR381_2021 viral cRNA, nearly complete genome
+    [4] fold=4  PZ244842.1       15331 bp  uid=3274687935
+          Human respirovirus 3 isolate 23V-12334_250115004, complete genome
+    [5] fold=0  PZ244839.1       15331 bp  uid=3274687902
+          Human respirovirus 3 isolate 23V-12036_250115002, complete genome
+    [6] fold=1  PZ244838.1       15331 bp  uid=3274687891
+          Human respirovirus 3 isolate 23V-9024_250127001, complete genome
+    [7] fold=2  PZ244837.1       15331 bp  uid=3274687880
+          Human respirovirus 3 isolate 23V-11697_250113008, complete genome
+    [8] fold=3  LC922678.1       15456 bp  uid=3260662459
+          Human respirovirus 3 HPIV3_Fukushima_OH993_2025 RNA, complete genome
+    [9] fold=4  LC922672.1       15451 bp  uid=3260662416
+          Human respirovirus 3 HPIV3_Fukushima_OH8561_2025 RNA, complete genome
+
+  Nipah  (10 isolates)
+    [0] fold=0  NC_002728.1      18246 bp  uid=13559808
+          Nipah virus, complete genome
+    [1] fold=1  PV640869.1       18168 bp  uid=3042791892
+          Henipavirus nipahense isolate MCL-25-H-2892, complete genome
+    [2] fold=2  PX130166.1       18124 bp  uid=3045545545
+          Henipavirus nipahense isolate NiV/human/BGD/FP0372425/2025, complete genome
+    [3] fold=3  PX130165.1       18128 bp  uid=3045545538
+          Henipavirus nipahense isolate NiV/human/BGD/SB0200425/2025, complete genome
+    [4] fold=4  PX130164.1       18126 bp  uid=3045545531
+          Henipavirus nipahense isolate NiV/human/BGD/RS0825725/2025, complete genome
+    [5] fold=0  PV892943.1       18096 bp  uid=3024727290
+          Henipavirus nipahense isolate 810398, complete genome
+    [6] fold=1  PV132707.1       18128 bp  uid=2924919026
+          Henipavirus nipahense isolate NiV/human/BGD/PMSKH0000424/2024, complete genome
+    [7] fold=2  PV132706.1       18133 bp  uid=2924919019
+          Henipavirus nipahense isolate NiV/human/BGD/DMCH00124/2024, complete genome
+    [8] fold=3  PQ463988.1       18131 bp  uid=2844552597
+          Henipavirus nipahense isolate NiV_M_IRF523, complete genome
+    [9] fold=4  PQ368169.1       18107 bp  uid=2844551665
+          Henipavirus nipahense isolate NiV/human/BGD/FP0300923BM/2023, complete genome
+
+  Human-Metapneumovirus  (10 isolates)
+    [0] fold=0  NC_039199.1      13350 bp  uid=1464315997
+          Human metapneumovirus isolate 00-1, complete genome
+    [1] fold=1  PZ239602.1       13234 bp  uid=3353253721
+          Human metapneumovirus isolate 23V-8652_250127020, partial genome
+    [2] fold=2  PZ239601.1       13194 bp  uid=3353253711
+          Human metapneumovirus isolate 23V-12376_250116003, partial genome
+    [3] fold=3  PZ399301.1       13087 bp  uid=3349522885
+          Human metapneumovirus strain NIV24_680, complete genome
+    [4] fold=4  PZ399300.1       13087 bp  uid=3349522877
+          Human metapneumovirus strain NIV24_312, complete genome
+    [5] fold=0  PZ399299.1       13087 bp  uid=3349522869
+          Human metapneumovirus strain NIV24_2969, complete genome
+    [6] fold=1  PZ399298.1       13086 bp  uid=3349522862
+          Human metapneumovirus strain NIV24_2950, partial genome
+    [7] fold=2  PZ399297.1       13087 bp  uid=3349522854
+          Human metapneumovirus strain NIV24_2905, complete genome
+    [8] fold=3  PZ399296.1       13087 bp  uid=3349522846
+          Human metapneumovirus strain NIV24_2898, complete genome
+    [9] fold=4  PZ399295.1       13087 bp  uid=3349522838
+          Human metapneumovirus strain NIV24_2897, complete genome

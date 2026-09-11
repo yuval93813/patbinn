@@ -1,0 +1,5 @@
+family,family_idx,variant,variant_idx,organism,title_keyword
+Coronaviridae,0,SARS-CoV-2,0,Severe acute respiratory syndrome coronavirus 2,
+Coronaviridae,0,HCoV-229E,1,Human coronavirus 229E,
+Flaviviridae,1,Dengue-1,0,Dengue virus 1,
+Flaviviridae,1,Zika,1,Zika virus,

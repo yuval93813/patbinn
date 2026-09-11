@@ -1,0 +1,46 @@
+# Apptainer image for PatBiNN: PyTorch + CUDA + the ART read simulator.
+#
+# Code and data are bind-mounted at `apptainer exec` time (see the scripts in
+# scripts/slurm/), so this image only needs to carry the environment:
+#
+#   apptainer build --fakeroot patbinn.sif patbinn.def
+#   apptainer exec --nv --bind $(pwd):/workspace --pwd /workspace patbinn.sif \
+#       python3 src/run_cv.py --cv_sample_manifest data/manifests/cv_sample_manifest.csv
+Bootstrap: docker
+From: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+
+%files
+    requirements.txt /opt/requirements.txt
+
+%post
+    apt-get update && apt-get install -y --no-install-recommends \
+        git \
+    && rm -rf /var/lib/apt/lists/*
+
+    pip install --no-cache-dir -r /opt/requirements.txt
+
+    # ART Illumina read simulator, for simulating training reads from reference genomes
+    conda install -y -c bioconda -c conda-forge art
+
+%environment
+    export PYTHONUNBUFFERED=1
+
+%runscript
+    # There is no single entry point - the repository has several, all under
+    # src/ (run_cv.py, train_moe.py, train_final_model.py, the sweep_*.py
+    # scripts). Run one explicitly with `apptainer exec`, or pass a script here.
+    if [ "$#" -eq 0 ]; then
+        cat <<'USAGE'
+PatBiNN container. Bind the repository at /workspace and run a script, e.g.
+
+  apptainer exec --nv --bind $(pwd):/workspace --pwd /workspace patbinn.sif \
+      python3 src/run_cv.py --cv_sample_manifest data/manifests/cv_sample_manifest.csv
+
+Entry points live in src/: run_cv.py, train_moe.py, train_flat.py,
+train_final_model.py, evaluate_moe.py, compare_kraken2.py, sweep_*.py,
+plot_results.py
+See README.md for the full Quickstart.
+USAGE
+        exit 0
+    fi
+    exec python3 "$@"
